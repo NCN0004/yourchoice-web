@@ -2,7 +2,7 @@
 <p>Na tejto stránke vysvetľujeme, aké osobné údaje spracúvame, prečo a aké máte práva. Riadime sa nariadením GDPR (EÚ) 2016/679 a zákonom č. 18/2018 Z. z. o ochrane osobných údajov.</p>
 
 <h2>1. Kto vaše údaje spracúva</h2>
-<p><b>Your Choice – jazykové služby, s.r.o.</b>, Jazdecká 8686/65, 917 01 Trnava, IČO: 50208055 (ďalej „my“).<br>
+<p><b>Your Choice – jazykové služby, s.r.o.</b>, Jazdecká 8686/65, 917 08 Trnava, IČO: 50208055 (ďalej „my“).<br>
 Kontakt pre otázky k osobným údajom: <a href="mailto:<?php echo esc_attr($e); ?>"><?php echo esc_html($e); ?></a>, +421 915 343 261.</p>
 
 <h2>2. Aké údaje spracúvame, prečo a ako dlho</h2>

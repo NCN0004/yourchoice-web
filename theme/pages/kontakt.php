@@ -12,7 +12,7 @@ Odpovedáme v pracovné dni do 24 hodín.</p>
 <section class="yc-card">
 <h2>Fakturačné údaje</h2>
 <p><b>Your Choice – jazykové služby, s.r.o.</b><br>
-Jazdecká 8686/65<br>917 01 Trnava<br>Slovenská republika</p>
+Jazdecká 8686/65<br>917 08 Trnava<br>Slovenská republika</p>
 <p>IČO: 50208055<br>DIČ: 2120212391<br>IČ DPH: SK2120212391</p>
 <p>Spoločnosť je platiteľom DPH.<br>Zapísaná v Obchodnom registri Okresného súdu Trnava, oddiel: Sro, vložka č. 37254/T.</p>
 </section>

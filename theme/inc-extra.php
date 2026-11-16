@@ -47,7 +47,7 @@ add_action('wp_head', function () {
 		'telephone' => '+421915343261',
 		'email' => yc_email(),
 		'priceRange' => 'od 18,50 € / normostrana bez DPH',
-		'address' => ['@type' => 'PostalAddress', 'streetAddress' => 'Jazdecká 8686/65', 'addressLocality' => 'Trnava', 'postalCode' => '917 01', 'addressCountry' => 'SK'],
+		'address' => ['@type' => 'PostalAddress', 'streetAddress' => 'Jazdecká 8686/65', 'addressLocality' => 'Trnava', 'postalCode' => '917 08', 'addressCountry' => 'SK'],
 		'areaServed' => ['@type' => 'Country', 'name' => 'Slovensko'],
 		'openingHoursSpecification' => [['@type' => 'OpeningHoursSpecification', 'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'opens' => '08:00', 'closes' => '18:00']],
 		'taxID' => '2120212391', 'vatID' => 'SK2120212391', 'identifier' => 'IČO 50208055',

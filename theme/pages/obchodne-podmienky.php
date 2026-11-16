@@ -1,5 +1,5 @@
 <?php $e = yc_email(); ?>
-<p>Tieto podmienky upravujú vzťahy medzi spoločnosťou <b>Your Choice – jazykové služby, s.r.o.</b>, Jazdecká 8686/65, 917 01 Trnava, IČO: 50208055, IČ DPH: SK2120212391 (ďalej „dodávateľ“) a objednávateľom prekladateľských služieb, ktorý je podnikateľom alebo právnickou osobou (ďalej „objednávateľ“).</p>
+<p>Tieto podmienky upravujú vzťahy medzi spoločnosťou <b>Your Choice – jazykové služby, s.r.o.</b>, Jazdecká 8686/65, 917 08 Trnava, IČO: 50208055, IČ DPH: SK2120212391 (ďalej „dodávateľ“) a objednávateľom prekladateľských služieb, ktorý je podnikateľom alebo právnickou osobou (ďalej „objednávateľ“).</p>
 
 <h2>1. Objednávka</h2>
 <p>Na základe dopytu pošle dodávateľ objednávateľovi cenovú ponuku s cenou a termínom dodania. Zmluva vzniká, keď objednávateľ ponuku písomne potvrdí (stačí e-mailom). Cenová ponuka je bezplatná a nezáväzná.</p>
