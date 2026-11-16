@@ -17,7 +17,7 @@ function yc_anchor($id) {
 }
 function yc_landing() {
 	static $l = null;
-	if ($l === null) $l = include get_template_directory() . '/landing-data.php';
+	if ($l === null) $l = array_merge(include get_template_directory() . '/landing-data.php', include get_template_directory() . '/landing-en.php');
 	return $l;
 }
 function yc_pages() {
@@ -30,9 +30,11 @@ function yc_pages() {
 	];
 	$p['novinky'] = ['Odborné novinky pre firmy', 'Praktické články o prekladoch pre firmy: anglické zmluvy, dokumenty pre zahraničných zamestnancov, AI a strojový preklad.'];
 	foreach (yc_articles() as $s => $a) $p[$s] = [$a['t'], $a['d']];
+	$p['en'] = ['Translation services for companies in Slovakia', 'Specialised and certified translations to and from Slovak for companies: contracts, technical documentation, HR documents, websites. 25 languages, quote within 24 hours.'];
 	foreach (yc_landing() as $s => $x) $p[$s] = [$x['t'], $x['d']];
 	return $p;
 }
+function yc_is_en() { $pg = (string) get_query_var('yc_page'); return $pg === 'en' || strpos($pg, 'en/') === 0; }
 function yc_email() { return yc_notify_email(); }
 function yc_articles() {
 	return [

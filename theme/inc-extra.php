@@ -26,9 +26,12 @@ add_action('wp_head', function () {
 	$url = yc_current_url();
 	$img = get_template_directory_uri() . '/og.jpg';
 	echo '<link rel="canonical" href="' . esc_url($url) . '">' . "\n";
-	foreach (['og:type' => 'website', 'og:site_name' => 'Your Choice – preklady pre firmy', 'og:locale' => 'sk_SK', 'og:title' => $title, 'og:description' => $desc, 'og:url' => $url, 'og:image' => $img, 'og:image:width' => '1200', 'og:image:height' => '627', 'og:image:alt' => 'Your Choice – preklady pre firmy'] as $k => $v) {
+	foreach (['og:type' => 'website', 'og:site_name' => 'Your Choice – preklady pre firmy', 'og:locale' => yc_is_en() ? 'en_GB' : 'sk_SK', 'og:title' => $title, 'og:description' => $desc, 'og:url' => $url, 'og:image' => $img, 'og:image:width' => '1200', 'og:image:height' => '627', 'og:image:alt' => 'Your Choice – preklady pre firmy'] as $k => $v) {
 		echo '<meta property="' . esc_attr($k) . '" content="' . esc_attr($v) . '">' . "\n";
 	}
+	$LL = yc_landing();
+	if ($pg && isset($LL[$pg]['sk'])) { echo '<link rel="alternate" hreflang="en" href="' . esc_url($url) . '">' . "\n" . '<link rel="alternate" hreflang="sk" href="' . esc_url(home_url('/' . $LL[$pg]['sk'] . '/')) . '">' . "\n"; }
+	foreach ($LL as $es => $ex) if (isset($ex['sk']) && $ex['sk'] === $pg) { echo '<link rel="alternate" hreflang="sk" href="' . esc_url($url) . '">' . "\n" . '<link rel="alternate" hreflang="en" href="' . esc_url(home_url('/' . $es . '/')) . '">' . "\n"; }
 	echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
 
 	$org = [
@@ -105,3 +108,6 @@ add_action('yc_dopyty_cleanup', function () {
 
 /* Odosielateľ e-mailov z webu. */
 add_filter('wp_mail_from_name', function () { return 'Your Choice – web'; });
+
+/* Anglické stránky: jazyk dokumentu. */
+add_filter('language_attributes', function ($o) { return yc_is_en() ? 'lang="en-GB"' : $o; });

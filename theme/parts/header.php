@@ -22,6 +22,7 @@
 <a href="<?php echo yc_anchor('referencie'); ?>" style="text-decoration: none">Referencie</a>
 <a href="<?php echo esc_url(home_url('/novinky/')); ?>" style="text-decoration: none">Odborné novinky</a>
 <a href="<?php echo yc_anchor('kontakt'); ?>" style="text-decoration: none">Kontakt</a>
+<?php if (yc_is_en()): ?><a href="<?php echo esc_url(home_url('/')); ?>" lang="sk" style="text-decoration: none; font-weight: 700">SK</a><?php else: ?><a href="<?php echo esc_url(home_url('/en/')); ?>" lang="en" aria-label="English version" style="text-decoration: none; font-weight: 700">EN</a><?php endif; ?>
 </nav>
 <div style="display: flex; align-items: center; gap: 14px">
 <a href="tel:+421915343261" style="font-weight: 600; font-size: 15px; text-decoration: none">+421 915 343 261</a>
