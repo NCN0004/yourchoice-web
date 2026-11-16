@@ -23,6 +23,7 @@ function yc_landing() {
 function yc_pages() {
 	$p = [
 		'sluzby' => ['Prekladové služby pre firmy', 'Odborné a úradné preklady, lokalizácia webov, dokumenty pre zamestnancov, technická dokumentácia a AI preklad s kontrolou. Cenová ponuka do 24 hodín.'],
+		'cennik' => ['Cenník prekladov pre firmy 2026', 'Cenník odborných a úradných prekladov pre firmy: od 18,50 € za normostranu, úradný preklad od 25 €. Zľavy pri objeme, expres do 24 hodín, príklady výpočtu.'],
 		'kontakt' => ['Kontakt a fakturačné údaje', 'Kontakt na Your Choice – jazykové služby, s.r.o., Trnava. Telefón, e-mail a fakturačné údaje.'],
 		'ochrana-osobnych-udajov' => ['Ochrana osobných údajov', 'Ako Your Choice – jazykové služby, s.r.o. spracúva osobné údaje.'],
 		'cookies' => ['Cookies', 'Aké cookies používa web yourchoice.sk a ako zmeniť svoj súhlas.'],
@@ -40,6 +41,7 @@ function yc_articles() {
 	return [
 		'anglicka-zmluva-5-viet' => ['cat' => 'ZMLUVY', 'min' => 6, 't' => '5 viet v anglickej zmluve, na ktorých sa firmy najčastejšie potknú', 'd' => 'Shall, best efforts, indemnify, consequential damages a including without limitation: čo znamenajú a ako ich správne preložiť.'],
 		'dokumenty-pre-zahranicnych-zamestnancov' => ['cat' => 'HR', 'min' => 5, 't' => 'Zamestnávate cudzincov? Ktoré dokumenty im dať v ich jazyku', 'd' => 'BOZP, pracovná zmluva, pracovný poriadok a postupy: čo hovorí zákon a ktoré dokumenty preložiť zahraničným zamestnancom.'],
+		'kolko-stoji-preklad' => ['cat' => 'CENY', 'min' => 5, 't' => 'Koľko stojí preklad pre firmu v roku 2026', 'd' => 'Ceny odborného a úradného prekladu za normostranu, čo cenu zvyšuje a ako ušetriť. S príkladmi výpočtu pre zmluvu, manuál aj výročnú správu.'],
 		'strojovy-preklad-kedy-staci' => ['cat' => 'AI A PREKLAD', 'min' => 4, 't' => 'Kedy stačí strojový preklad a kedy firmu vyjde draho', 'd' => 'Kedy použiť AI a strojový preklad, kedy je potrebný človek a prečo zmluvy, úradné texty a marketing nepatria do bezplatného prekladača.'],
 	];
 }
@@ -179,3 +181,4 @@ function yc_handle_form() {
 /* Show inquiry list nicely in admin */
 add_filter('manage_yc_dopyt_posts_columns', function ($c) { return ['cb' => $c['cb'], 'title' => 'Dopyt', 'date' => 'Prijaté']; });
 require_once __DIR__ . '/inc-extra.php';
+require_once __DIR__ . '/inc-seo.php';

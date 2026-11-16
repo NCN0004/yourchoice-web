@@ -2,7 +2,7 @@
 Theme Name: Your Choice
 Description: Web Your Choice – jazykové služby pre firmy.
 Author: Claude
-Version: 1.4.0
+Version: 1.5.0
 Text Domain: yourchoice
 */
 html{scroll-behavior:smooth}
@@ -48,3 +48,10 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 /* plávajúce tlačidlo WhatsApp – len na mobile */
 .yc-wa{display:none}
 @media (max-width:768px){.yc-wa{display:flex;position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25D366;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:50}}
+.yc-steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:12px}
+.yc-steps li{counter-increment:s;padding:14px 18px 14px 58px;position:relative;background:#fff;border:1px solid #ECE7DC;border-radius:16px}
+.yc-steps li:before{content:counter(s);position:absolute;left:16px;top:12px;width:28px;height:28px;border-radius:50%;background:#F59E1B;color:#14213D;font-weight:800;display:flex;align-items:center;justify-content:center}
+.yc-table{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border-radius:16px;overflow:hidden}
+.yc-table th,.yc-table td{text-align:left;padding:12px 14px;border-bottom:1px solid #ECE7DC;vertical-align:top}
+.yc-table th{background:#14213D;color:#fff;font-weight:700}
+.yc-answer{background:#FDEBD3;border-radius:16px;padding:16px 20px;font-size:18px}

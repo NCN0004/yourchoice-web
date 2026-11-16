@@ -5,7 +5,8 @@
   function loadGA() {
     if (window.gtag || !cfg.ga) return;
     window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
-    gtag('js', new Date()); gtag('config', cfg.ga);
+    gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    gtag('js', new Date()); gtag('config', cfg.ga, { content_group: cfg.group || 'ine', page_language: cfg.lang || 'sk' });
     var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + cfg.ga; document.head.appendChild(s);
     if (window.YC_LEAD) gtag('event', 'generate_lead', { formular: window.YC_LEAD });
   }
@@ -45,6 +46,7 @@
       if (window.gtag) gtag('event', 'form_odoslanie', { formular: f.dataset.ycForm });
     });
   });
+  document.querySelectorAll('a.yc-btn, header a[href*="#kontakt"]').forEach(function (a) { a.addEventListener('click', function () { if (window.gtag) gtag('event', 'klik_dopyt', { umiestnenie: cfg.group || 'ine', text: (a.textContent || '').trim().slice(0, 40) }); }); });
   document.querySelectorAll('a[href^="tel:"]').forEach(function (a) { a.addEventListener('click', function () { if (window.gtag) gtag('event', 'klik_telefon'); }); });
   document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) { a.addEventListener('click', function () { if (window.gtag) gtag('event', 'klik_email'); }); });
 })();

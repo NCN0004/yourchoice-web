@@ -215,10 +215,9 @@
 <!-- FAQ -->
 <section style="max-width: 900px; margin: 0 auto; padding: 24px 24px 80px; display: flex; flex-direction: column; gap: 14px">
 <h2 style="margin: 0 0 10px; font-size: 40px; font-weight: 800; text-align: center">Časté otázky firiem</h2>
-<details style="background: #FFFFFF; border: 1px solid #ECE7DC; border-radius: 18px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 17px; cursor: pointer">Ako sa počíta cena prekladu?</summary><p style="margin: 10px 0 0; color: #4A5468; line-height: 1.6">Podľa normostrany (1 800 znakov vrátane medzier), jazyka a odboru. Odborné preklady od 18,50 €/NS, úradné od 25 €/NS (ceny bez DPH). Za odborný text si nič nepripočítavame. Od 10 normostrán máte zľavu 10 %, od 30 normostrán 15 %, pri rámcovej zmluve ešte nižšiu cenu.</p></details>
-<details style="background: #FFFFFF; border: 1px solid #ECE7DC; border-radius: 18px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 17px; cursor: pointer">Aký je rozdiel medzi odborným a úradným prekladom?</summary><p style="margin: 10px 0 0; color: #4A5468; line-height: 1.6">Úradný preklad je zviazaný s dokumentom a má pečiatku úradného prekladateľa – vyžadujú ho súdy, úrady a obchodný register. Odborný preklad je na bežné firemné použitie a dá sa dodať elektronicky.</p></details>
-<details style="background: #FFFFFF; border: 1px solid #ECE7DC; border-radius: 18px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 17px; cursor: pointer">Ako rýchlo to stihnete?</summary><p style="margin: 10px 0 0; color: #4A5468; line-height: 1.6">Presný termín dostanete spolu s cenou do 24 hodín. Väčšie zákazky rozdelíme medzi viacerých prekladateľov so spoločným glosárom, aby text pôsobil jednotne. Štandardný termín je bez príplatku, expres do 24 hodín (do 5 normostrán) je za príplatok 50 %.</p></details>
-<details style="background: #FFFFFF; border: 1px solid #ECE7DC; border-radius: 18px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 17px; cursor: pointer">Sú naše dokumenty v bezpečí?</summary><p style="margin: 10px 0 0; color: #4A5468; line-height: 1.6">Áno. Podpíšeme NDA, súbory prenášame šifrovane a zo servera ich automaticky vymažeme najneskôr do 90 dní. Dôverné texty nikdy nevkladáme do verejných prekladačov.</p></details>
+<?php foreach (yc_home_faq() as $f): ?>
+<details style="background: #FFFFFF; border: 1px solid #ECE7DC; border-radius: 18px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 17px; cursor: pointer"><?php echo esc_html($f[0]); ?></summary><p style="margin: 10px 0 0; color: #4A5468; line-height: 1.6"><?php echo esc_html($f[1]); ?></p></details>
+<?php endforeach; ?>
 </section>
 
 <!-- CONTACT -->

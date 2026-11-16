@@ -59,6 +59,7 @@ add_action('wp_head', function () {
 			['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Úradný preklad'], 'priceSpecification' => ['@type' => 'UnitPriceSpecification', 'price' => '25.00', 'priceCurrency' => 'EUR', 'unitText' => 'normostrana', 'valueAddedTaxIncluded' => false]],
 		]];
 	}
+	$org = apply_filters('yc_org_schema', $org);
 	echo '<script type="application/ld+json">' . wp_json_encode($org, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>' . "\n";
 }, 5);
 
