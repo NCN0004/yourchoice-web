@@ -28,10 +28,19 @@ function yc_pages() {
 		'cookies' => ['Cookies', 'Aké cookies používa web yourchoice.sk a ako zmeniť svoj súhlas.'],
 		'obchodne-podmienky' => ['Všeobecné obchodné podmienky', 'Všeobecné obchodné podmienky Your Choice – jazykové služby, s.r.o.'],
 	];
+	$p['novinky'] = ['Odborné novinky pre firmy', 'Praktické články o prekladoch pre firmy: anglické zmluvy, dokumenty pre zahraničných zamestnancov, AI a strojový preklad.'];
+	foreach (yc_articles() as $s => $a) $p[$s] = [$a['t'], $a['d']];
 	foreach (yc_landing() as $s => $x) $p[$s] = [$x['t'], $x['d']];
 	return $p;
 }
 function yc_email() { return yc_notify_email(); }
+function yc_articles() {
+	return [
+		'anglicka-zmluva-5-viet' => ['cat' => 'ZMLUVY', 'min' => 6, 't' => '5 viet v anglickej zmluve, na ktorých sa firmy najčastejšie potknú', 'd' => 'Shall, best efforts, indemnify, consequential damages a including without limitation: čo znamenajú a ako ich správne preložiť.'],
+		'dokumenty-pre-zahranicnych-zamestnancov' => ['cat' => 'HR', 'min' => 5, 't' => 'Zamestnávate cudzincov? Ktoré dokumenty im dať v ich jazyku', 'd' => 'BOZP, pracovná zmluva, pracovný poriadok a postupy: čo hovorí zákon a ktoré dokumenty preložiť zahraničným zamestnancom.'],
+		'strojovy-preklad-kedy-staci' => ['cat' => 'AI A PREKLAD', 'min' => 4, 't' => 'Kedy stačí strojový preklad a kedy firmu vyjde draho', 'd' => 'Kedy použiť AI a strojový preklad, kedy je potrebný človek a prečo zmluvy, úradné texty a marketing nepatria do bezplatného prekladača.'],
+	];
+}
 
 add_action('wp_enqueue_scripts', function () {
 	$v = wp_get_theme()->get('Version');
