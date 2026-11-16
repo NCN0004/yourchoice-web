@@ -62,6 +62,12 @@ add_action('init', function () {
 	add_rewrite_rule('^llms\.txt$', 'index.php?yc_file=llms', 'top');
 });
 add_filter('query_vars', function ($v) { $v[] = 'yc_file'; return $v; });
+/* Záloha: niektoré servery /sitemap.xml neprepustia cez prepisovacie pravidlá – rozpoznáme ju priamo z adresy. */
+add_action('parse_request', function ($wp) {
+	$path = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
+	if ($path === 'sitemap.xml' || $path === 'sitemap_index.xml') $wp->query_vars = ['yc_file' => 'sitemap'];
+	elseif ($path === 'llms.txt') $wp->query_vars = ['yc_file' => 'llms'];
+}, 1);
 add_filter('wp_sitemaps_enabled', '__return_false');
 add_filter('redirect_canonical', function ($u) { return get_query_var('yc_file') ? false : $u; });
 
