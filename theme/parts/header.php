@@ -20,7 +20,6 @@
 <a href="<?php echo yc_anchor('odvetvia'); ?>" style="text-decoration: none">Odvetvia</a>
 <a href="<?php echo yc_anchor('proces'); ?>" style="text-decoration: none">Ako pracujeme</a>
 <a href="<?php echo yc_anchor('referencie'); ?>" style="text-decoration: none">Referencie</a>
-<a href="<?php echo yc_anchor('novinky'); ?>" style="text-decoration: none">Odborné novinky</a>
 <a href="<?php echo yc_anchor('kontakt'); ?>" style="text-decoration: none">Kontakt</a>
 </nav>
 <div style="display: flex; align-items: center; gap: 14px">

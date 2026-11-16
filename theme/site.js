@@ -48,3 +48,20 @@
   document.querySelectorAll('a[href^="tel:"]').forEach(function (a) { a.addEventListener('click', function () { if (window.gtag) gtag('event', 'klik_telefon'); }); });
   document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) { a.addEventListener('click', function () { if (window.gtag) gtag('event', 'klik_email'); }); });
 })();
+(function () {
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(function (a) { a.addEventListener('click', function () { if (window.gtag) gtag('event', 'klik_whatsapp'); }); });
+  var c = document.querySelector('[data-yc-calc]'); if (!c) return;
+  var q = function (k) { return c.querySelector('[data-calc="' + k + '"]'); };
+  var fmt = function (n) { return n.toLocaleString('sk-SK', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; };
+  function run() {
+    var ns = Math.max(1, Math.min(2000, parseFloat(q('ns').value) || 1));
+    var cena = parseFloat(q('druh').value) * ns * parseFloat(q('termin').value);
+    var z = ns >= 30 ? 0.15 : (ns >= 10 ? 0.10 : 0);
+    cena = cena * (1 - z);
+    q('out').textContent = fmt(cena); q('out2').textContent = '(' + fmt(cena * 1.23) + ' s DPH)';
+    q('note').textContent = z ? 'Započítali sme množstevnú zľavu ' + Math.round(z * 100) + ' %.' : (ns >= 7 ? 'Od 10 normostrán máte zľavu 10 %.' : '');
+  }
+  ['druh', 'ns', 'termin'].forEach(function (k) { q(k).addEventListener('input', run); q(k).addEventListener('change', run); });
+  run();
+  var once = false; c.addEventListener('change', function () { if (!once && window.gtag) { once = true; gtag('event', 'kalkulacka_pouzitie'); } });
+})();

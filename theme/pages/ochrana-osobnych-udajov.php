@@ -8,7 +8,7 @@ Kontakt pre otázky k osobným údajom: <a href="mailto:<?php echo esc_attr($e);
 <h2>2. Aké údaje spracúvame, prečo a ako dlho</h2>
 <div class="yc-tablewrap"><table>
 <tr><th>Situácia</th><th>Údaje</th><th>Právny základ</th><th>Ako dlho</th></tr>
-<tr><td>Pošlete nám dopyt (formulár, e-mail, telefón)</td><td>meno, firma, e-mail, telefón, text správy, priložené dokumenty</td><td>kroky pred uzavretím zmluvy na vašu žiadosť (čl. 6 ods. 1 písm. b) GDPR)</td><td>ak zákazka nevznikne, najviac 12 mesiacov od posledného kontaktu</td></tr>
+<tr><td>Pošlete nám dopyt (formulár, e-mail, telefón)</td><td>meno, firma, e-mail, telefón, text správy, priložené dokumenty</td><td>kroky pred uzavretím zmluvy na vašu žiadosť (čl. 6 ods. 1 písm. b) GDPR)</td><td>ak zákazka nevznikne, najviac 12 mesiacov od posledného kontaktu; priložené súbory zo servera webu mažeme automaticky do 90 dní</td></tr>
 <tr><td>Realizujeme pre vás preklad</td><td>kontaktné a fakturačné údaje, obsah dokumentov na preklad</td><td>plnenie zmluvy (čl. 6 ods. 1 písm. b) GDPR)</td><td>počas zákazky a primeraný čas po nej pre prípad reklamácie</td></tr>
 <tr><td>Fakturácia a účtovníctvo</td><td>fakturačné údaje, údaje o platbách</td><td>zákonná povinnosť (čl. 6 ods. 1 písm. c) GDPR)</td><td>10 rokov podľa zákona o účtovníctve a zákona o DPH</td></tr>
 <tr><td>Požiadate o cenník alebo o spätné zavolanie</td><td>e-mail alebo telefónne číslo</td><td>kroky pred uzavretím zmluvy na vašu žiadosť</td><td>najviac 12 mesiacov</td></tr>

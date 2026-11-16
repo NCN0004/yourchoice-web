@@ -64,6 +64,19 @@
 </ul>
 </section>
 
+<section class="yc-card" id="kalkulacka" data-yc-calc>
+<h2>Orientačná cena za pár sekúnd</h2>
+<p class="yc-meta">1 normostrana = 1 800 znakov s medzerami (asi pol strany A4 husto popísanej). Presnú cenu pošleme do 24 hodín.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0">
+<label style="display:flex;flex-direction:column;gap:6px;font-weight:600">Druh prekladu<select data-calc="druh" style="min-height:44px;padding:8px 12px;border:1px solid #D9D3C5;border-radius:12px;background:#fff"><option value="18.5">Odborný (od 18,50 €/NS)</option><option value="25">Úradný s pečiatkou (od 25 €/NS)</option></select></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-weight:600">Počet normostrán<input data-calc="ns" type="number" min="1" max="2000" value="5" inputmode="numeric" style="min-height:44px;padding:8px 12px;border:1px solid #D9D3C5;border-radius:12px"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-weight:600">Termín<select data-calc="termin" style="min-height:44px;padding:8px 12px;border:1px solid #D9D3C5;border-radius:12px;background:#fff"><option value="1">Štandardný</option><option value="1.5">Expres do 24 h (+50 %)</option></select></label>
+</div>
+<p style="font-size:20px;margin:8px 0" aria-live="polite">Orientačne <b data-calc="out">92,50 €</b> bez DPH <span class="yc-meta" data-calc="out2">(113,78 € s DPH)</span></p>
+<p class="yc-meta" data-calc="note"></p>
+<a class="yc-btn" href="<?php echo yc_anchor('kontakt'); ?>">Chcem presnú ponuku</a>
+</section>
+
 <h2>Preklady podľa odvetvia</h2>
 <div class="yc-links"><?php foreach (yc_landing() as $s => $x) if ($x['g'] === 'o') echo '<a href="' . esc_url(home_url('/' . $s . '/')) . '">' . esc_html($x['n']) . '</a>'; ?></div>
 <h2>Preklady podľa typu dokumentu</h2>

@@ -13,6 +13,7 @@ get_header(); ?>
 <svg aria-hidden="true" viewBox="0 0 64 64" width="72" height="72"><circle cx="32" cy="32" r="30" fill="#E3F2EF"/><path d="M20 33 L28 41 L45 23" fill="none" stroke="#2E9E6A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 <h1><?php echo esc_html($t[0]); ?></h1>
 <p><?php echo esc_html($t[1]); ?></p>
+<ol style="text-align:left;max-width:520px;margin:24px auto;line-height:1.7"><li>Janka si dopyt prečíta a ak niečo chýba, ozve sa vám.</li><li>Do 24 hodín v pracovné dni dostanete cenu a termín.</li><li>Ponuku potvrdíte e-mailom a ideme prekladať.</li></ol>
 <p>Ak to súri, zavolajte nám na <a href="tel:+421915343261"><b>+421 915 343 261</b></a>.</p>
 <p><a href="<?php echo esc_url(home_url('/')); ?>">← Späť na domovskú stránku</a></p>
 </article>

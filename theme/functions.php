@@ -167,3 +167,4 @@ function yc_handle_form() {
 
 /* Show inquiry list nicely in admin */
 add_filter('manage_yc_dopyt_posts_columns', function ($c) { return ['cb' => $c['cb'], 'title' => 'Dopyt', 'date' => 'Prijaté']; });
+require_once __DIR__ . '/inc-extra.php';
