@@ -1,0 +1,47 @@
+/*
+Theme Name: Your Choice
+Description: Web Your Choice – jazykové služby pre firmy.
+Author: Claude
+Version: 1.2.0
+Text Domain: yourchoice
+*/
+html{scroll-behavior:smooth}
+body{margin:0;background:#FAF8F4;color:#14213D;font-family:Inter,system-ui,sans-serif}
+a{color:#14213D}a:hover{color:#B8650A}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif}
+input,select,textarea,button{font-family:Inter,system-ui,sans-serif;color:#14213D}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid #F59E1B;outline-offset:2px}
+.yc-page{max-width:820px;margin:0 auto;padding:64px 24px 96px;line-height:1.7;font-size:17px}
+.yc-page h1{font-size:44px;line-height:1.1;margin:0 0 24px}
+.yc-note{background:#E3F2EF;border-radius:16px;padding:14px 18px;font-weight:600}
+@media (max-width:760px){
+ h1{font-size:40px!important;line-height:1.08!important}
+ h2{font-size:30px!important}
+ header nav{display:none!important}
+ section[id="top"]{padding-top:40px!important}
+ section > div[style*="padding: 36px"],form[style*="padding: 32px"]{padding:22px!important}
+ div[style*="grid-template-columns: repeat(auto-fit, minmax(330px"],div[style*="grid-template-columns: repeat(auto-fit, minmax(320px"]{grid-template-columns:1fr!important}
+ *[style*="flex: 1 1 560px"],*[style*="flex: 1 1 520px"],*[style*="flex: 1 1 400px"],*[style*="flex: 1 1 420px"],*[style*="flex: 1 1 380px"]{flex-basis:100%!important}
+}
+.yc-page h2{font-size:28px;line-height:1.2;margin:40px 0 12px}
+.yc-page h3{font-size:21px;margin:28px 0 8px}
+.yc-page table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+.yc-page th,.yc-page td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid #ECE7DC}
+.yc-page th{background:#F3EFE6}
+.yc-page .yc-tablewrap{overflow-x:auto}
+.yc-btn{display:inline-flex;align-items:center;min-height:46px;padding:12px 20px;border-radius:12px;background:#F59E1B;color:#14213D;font-weight:700;text-decoration:none;border:0;font-size:16px;cursor:pointer}
+.yc-btn.dark{background:#14213D;color:#fff}
+.yc-btn.ghost{background:#fff;border:2px solid #14213D}
+.yc-card{background:#fff;border:1px solid #ECE7DC;border-radius:24px;padding:26px 28px;margin:18px 0}
+.yc-card h2{margin-top:0}
+.yc-price{display:inline-block;background:#FDEBD3;border-radius:999px;padding:5px 14px;font-weight:700;font-size:15px}
+.yc-meta{color:#4A5468;font-size:15px}
+#yc-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:999;max-width:760px;margin:0 auto;background:#fff;color:#14213D;border:1px solid #D9D3C5;border-radius:20px;padding:20px 22px;box-shadow:0 24px 60px -20px rgba(20,33,61,.45);font-size:15px;line-height:1.55}
+#yc-cookie b{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:19px}
+#yc-cookie .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+#yc-cookie .row .yc-btn{flex:1 1 180px;justify-content:center}
+.yc-check{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px 24px}
+.yc-check li{padding-left:28px;position:relative}
+.yc-check li:before{content:"";position:absolute;left:2px;top:.45em;width:12px;height:7px;border-left:3px solid #2E9E6A;border-bottom:3px solid #2E9E6A;transform:rotate(-45deg)}
+.yc-links{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 28px}
+.yc-links a{background:#fff;border:1px solid #D9D3C5;border-radius:999px;padding:9px 16px;text-decoration:none;font-weight:600;font-size:15px}
