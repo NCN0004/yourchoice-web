@@ -112,3 +112,20 @@ add_filter('wp_mail_from_name', function () { return 'Your Choice – web'; });
 
 /* Anglické stránky: jazyk dokumentu. */
 add_filter('language_attributes', function ($o) { return yc_is_en() ? 'lang="en-GB"' : $o; });
+
+/* Odosielanie e-mailov cez SMTP schránku na yourchoice.sk (M7/Platon).
+   Zapne sa až vtedy, keď sú v súbore wp-config.php na serveri nastavené konštanty
+   YC_SMTP_HOST, YC_SMTP_USER, YC_SMTP_PASS (a voliteľne YC_SMTP_PORT, YC_SMTP_SECURE).
+   Heslo sa nikdy neukladá do tohto repozitára. */
+add_action('phpmailer_init', function ($m) {
+	if (!defined('YC_SMTP_HOST') || !defined('YC_SMTP_USER') || !defined('YC_SMTP_PASS')) return;
+	$m->isSMTP();
+	$m->Host = YC_SMTP_HOST;
+	$m->SMTPAuth = true;
+	$m->Username = YC_SMTP_USER;
+	$m->Password = YC_SMTP_PASS;
+	$m->Port = defined('YC_SMTP_PORT') ? (int) YC_SMTP_PORT : 587;
+	$m->SMTPSecure = defined('YC_SMTP_SECURE') ? YC_SMTP_SECURE : 'tls';
+	$m->setFrom(YC_SMTP_USER, 'Your Choice – web', false);
+	$m->Sender = YC_SMTP_USER;
+});
