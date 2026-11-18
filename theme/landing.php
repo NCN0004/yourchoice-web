@@ -5,7 +5,7 @@ $S = $en
  : ['vat' => 'bez DPH', 'meta' => 'bez príplatku za odborný text · od 10 NS zľava 10 %', 'cta' => 'Získať cenovú ponuku do 24 h', 'h1' => 'Čo najčastejšie prekladáme', 'h2' => 'Ako pracujeme', 'h3' => 'Časté otázky', 'b1' => 'Pošlite nám dokument, ozveme sa s cenou', 'b2' => 'Cenu a termín máte do 24 hodín v pracovné dni, nezáväzne.', 'b3' => 'Poslať dopyt', 'also' => 'Pozrite aj', 'all' => 'Všetky služby', 'allurl' => home_url('/sluzby/')]; ?>
 <?php if (empty($GLOBALS['yc_hero_lead'])): ?><p style="font-size:20px;color:#4A5468"><?php echo esc_html($L['lead']); ?></p><?php endif; ?>
 <p><span class="yc-price"><?php echo esc_html($L['price']); ?> · <?php echo $S['vat']; ?></span> <span class="yc-meta"><?php echo esc_html($S['meta']); ?></span></p>
-<p><a class="yc-btn" href="<?php echo $k; ?>"><?php echo esc_html($S['cta']); ?></a> <a href="tel:+421915343261" style="margin-left:12px;font-weight:600">+421 915 343 261</a></p>
+<?php if (empty($GLOBALS['yc_hero_lead'])): ?><p><a class="yc-btn" href="<?php echo $k; ?>"><?php echo esc_html($S['cta']); ?></a> <a href="tel:+421915343261" style="margin-left:12px;font-weight:600">+421 915 343 261</a></p><?php endif; ?>
 
 <h2><?php echo esc_html($S['h1']); ?></h2>
 <ul class="yc-check"><?php foreach ($L['items'] as $i) echo '<li>' . esc_html($i) . '</li>'; ?></ul>
