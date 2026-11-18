@@ -24,6 +24,7 @@ function yc_pages() {
 	$p = [
 		'sluzby' => ['Prekladové služby pre firmy', 'Odborné a úradné preklady, lokalizácia webov, dokumenty pre zamestnancov, technická dokumentácia a AI preklad s kontrolou. Cenová ponuka do 24 hodín.'],
 		'cennik' => ['Cenník prekladov pre firmy 2026', 'Cenník odborných a úradných prekladov pre firmy: od 18,50 € za normostranu, úradný preklad od 25 €. Zľavy pri objeme, expres do 24 hodín, príklady výpočtu.'],
+		'referencie' => ['Referencie a skúsenosti klientov', 'Čo hovoria klienti o prekladoch Your Choice: Arcadis, Slovenská pošta, ELPAM real. Odborné a úradné preklady pre firmy, 22 rokov praxe.'],
 		'kontakt' => ['Kontakt a fakturačné údaje', 'Kontakt na Your Choice – jazykové služby, s.r.o., Trnava. Telefón, e-mail a fakturačné údaje.'],
 		'ochrana-osobnych-udajov' => ['Ochrana osobných údajov', 'Ako Your Choice – jazykové služby, s.r.o. spracúva osobné údaje.'],
 		'cookies' => ['Cookies', 'Aké cookies používa web yourchoice.sk a ako zmeniť svoj súhlas.'],

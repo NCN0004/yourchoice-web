@@ -10,7 +10,7 @@ if ($L) {
 } elseif (isset($A[$pg])) {
 	$kick = 'Odborné novinky · ' . $A[$pg]['min'] . ' min čítania'; $crumb = ['Odborné novinky', home_url('/novinky/')];
 } else {
-	$kick = ['sluzby' => 'Služby a ceny', 'cennik' => 'Cenník 2026', 'kontakt' => 'Kontakt', 'novinky' => 'Blog o prekladoch pre firmy', 'en' => 'Your Choice · Trnava, Slovakia'][$pg] ?? ($legal ? 'Právne informácie' : 'Your Choice');
+	$kick = ['sluzby' => 'Služby a ceny', 'cennik' => 'Cenník 2026', 'kontakt' => 'Kontakt', 'referencie' => 'Klienti o nás', 'novinky' => 'Blog o prekladoch pre firmy', 'en' => 'Your Choice · Trnava, Slovakia'][$pg] ?? ($legal ? 'Právne informácie' : 'Your Choice');
 	$crumb = null;
 }
 $lead = $L ? $L['lead'] : ($A[$pg]['d'] ?? null);

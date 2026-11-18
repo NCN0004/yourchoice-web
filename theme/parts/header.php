@@ -19,7 +19,7 @@
 <a href="<?php echo yc_anchor('sluzby'); ?>" style="text-decoration: none">Služby</a>
 <a href="<?php echo yc_anchor('odvetvia'); ?>" style="text-decoration: none">Odvetvia</a>
 <a href="<?php echo yc_anchor('proces'); ?>" style="text-decoration: none">Ako pracujeme</a>
-<a href="<?php echo yc_anchor('referencie'); ?>" style="text-decoration: none">Referencie</a>
+<a href="<?php echo esc_url(home_url('/referencie/')); ?>" style="text-decoration: none">Referencie</a>
 <a href="<?php echo esc_url(home_url('/novinky/')); ?>" style="text-decoration: none">Odborné novinky</a>
 <a href="<?php echo yc_anchor('kontakt'); ?>" style="text-decoration: none">Kontakt</a>
 <?php if (yc_is_en()): ?><a href="<?php echo esc_url(home_url('/')); ?>" lang="sk" style="text-decoration: none; font-weight: 700">SK</a><?php else: ?><a href="<?php echo esc_url(home_url('/en/')); ?>" lang="en" aria-label="English version" style="text-decoration: none; font-weight: 700">EN</a><?php endif; ?>

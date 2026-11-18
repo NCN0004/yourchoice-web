@@ -200,6 +200,7 @@
 <blockquote style="margin: 0; background: #FFFFFF; border: 1px solid #ECE7DC; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 16px"><span style="font-size: 18px; line-height: 1.6">„Nanajvýš kvalitná a promptná dodávka – od medzinárodných zmlúv a výročných správ až po detské listy pre medzinárodné súťaže.“</span><span style="font-weight: 700">Ján Kollár · Slovenská pošta</span></blockquote>
 <blockquote style="margin: 0; background: #FFFFFF; border: 1px solid #ECE7DC; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 16px"><span style="font-size: 18px; line-height: 1.6">„Preklady na vysokej úrovni, ústretovosť a vždy dodržaný termín.“</span><span style="font-weight: 700">Martina Nováková · ELPAM real</span></blockquote>
 </div>
+<p style="text-align:center;margin:28px 0 0"><a href="<?php echo esc_url(home_url('/referencie/')); ?>" style="font-weight:700">Všetky referencie a čo sme pre klientov prekladali →</a></p>
 </section>
 
 <!-- NEWS -->

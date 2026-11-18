@@ -2,7 +2,7 @@
 Theme Name: Your Choice
 Description: Web Your Choice – jazykové služby pre firmy.
 Author: Claude
-Version: 1.8.3
+Version: 1.9.0
 Text Domain: yourchoice
 */
 html{scroll-behavior:smooth}
@@ -91,3 +91,15 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 @media (min-width:861px) and (max-width:1260px){header a[href^="tel:"]{display:none!important}header nav{gap:16px!important;font-size:14px!important}}
 header a[href^="tel:"],header a.yc-btn{white-space:nowrap}
 @media (max-width:860px){header a.yc-btn,header a[href*="#kontakt"][style*="background"]{font-size:15px!important;padding:12px 16px!important}}
+/* Referencie */
+.yc-clients{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 8px}
+.yc-clients span{flex:1 1 180px;text-align:center;padding:18px 14px;border:1px solid #ECE7DC;border-radius:14px;background:#fff;font-family:"Bricolage Grotesque",Inter,sans-serif;font-weight:800;font-size:19px;color:#6B7280;letter-spacing:.01em}
+.yc-ref{background:#fff;border:1px solid #ECE7DC;border-radius:22px;padding:26px 28px;margin:22px 0}
+.yc-ref-head{display:flex;align-items:center;gap:14px}
+.yc-ref-head h2{margin:0;font-size:24px}.yc-ref-head .yc-meta{margin:2px 0 0}
+.yc-ref-mono{flex:0 0 48px;height:48px;border-radius:12px;background:#14213D;color:#F59E1B;font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center;font-family:"Bricolage Grotesque",Inter,sans-serif}
+.yc-ref blockquote{margin:18px 0 6px;font-size:21px;line-height:1.5;font-family:"Bricolage Grotesque",Inter,sans-serif;color:#14213D;border-left:4px solid #F59E1B;padding-left:16px}
+.yc-ref-who{margin:0 0 12px;color:#4A5468;font-weight:600}
+.yc-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:12px 0 20px}
+.yc-stats div{background:#14213D;border-radius:16px;padding:18px;color:#D9DEEA;font-size:14px}
+.yc-stats b{display:block;font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:32px;color:#F59E1B;line-height:1.1}
