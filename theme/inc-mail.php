@@ -2,7 +2,7 @@
 /* Your Choice – firemné HTML e-maily z webu (potvrdenie zákazníkovi a oznámenie o dopyte). */
 if (!defined('ABSPATH')) exit;
 
-function yc_mail_wrap($preheader, $inner) {
+function yc_mail_wrap($preheader, $inner, $sign = true) {
 	$logo = get_template_directory_uri() . '/email-logo.png';
 	$web = 'https://www.yourchoice.sk/';
 	return '<!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your Choice</title></head>'
@@ -12,10 +12,10 @@ function yc_mail_wrap($preheader, $inner) {
 	. '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;font-family:Arial,Helvetica,sans-serif;color:#14213D;">'
 	. '<tr><td style="padding:28px 32px 8px;"><a href="' . $web . '"><img src="' . esc_url($logo) . '" width="220" alt="Your Choice – preklady pre firmy" style="display:block;border:0;width:220px;height:auto;"></a></td></tr>'
 	. $inner
-	. '<tr><td style="padding:8px 32px 28px;font-size:15px;line-height:1.6;">'
+	. (!$sign ? '<tr><td style="height:12px;"></td></tr>' : '<tr><td style="padding:8px 32px 28px;font-size:15px;line-height:1.6;">'
 	. '<p style="margin:0 0 6px;">S pozdravom</p>'
 	. '<p style="margin:0;"><strong>Janka Kubičková</strong><br>projektová manažérka, Your Choice<br>'
-	. 'tel. <a href="tel:+421915343261" style="color:#14213D;">+421 915 343 261</a> · <a href="mailto:hello@yourchoice.sk" style="color:#14213D;">hello@yourchoice.sk</a></p></td></tr>'
+	. 'tel. <a href="tel:+421915343261" style="color:#14213D;">+421 915 343 261</a> · <a href="mailto:hello@yourchoice.sk" style="color:#14213D;">hello@yourchoice.sk</a></p></td></tr>')
 	. '<tr><td style="background:#14213D;border-radius:0 0 12px 12px;padding:16px 32px;font-size:12px;line-height:1.6;color:#D9D3C5;">'
 	. 'Your Choice – jazykové služby, s.r.o. · Jazdecká 8686/65, 917 08 Trnava · IČO 50208055 · IČ DPH SK2120212391<br>'
 	. 'Odborné a úradné preklady pre firmy · 25 jazykov · 22 rokov praxe · <a href="' . $web . '" style="color:#F59E1B;">www.yourchoice.sk</a></td></tr>'
@@ -83,7 +83,7 @@ function yc_mail_team($kindlabel, $f, $nr, $nfiles, $back, $admin_url) {
 		. '<tr><td style="padding:0 32px 16px;">' . yc_mail_rows($rows) . '</td></tr>'
 		. '<tr><td style="padding:0 32px 10px;">' . $btn . '</td></tr>'
 		. '<tr><td style="padding:0 32px 16px;font-size:13px;color:#6B7280;">Dopyt je uložený aj v administrácii webu: <a href="' . esc_url($admin_url) . '" style="color:#14213D;">Dopyty</a>.</td></tr>';
-	return yc_mail_wrap('Nový dopyt ' . $nr . ' – ' . ($f['firma'] ?? $f['email'] ?? ''), $inner);
+	return yc_mail_wrap('Nový dopyt ' . $nr . ' – ' . ($f['firma'] ?? $f['email'] ?? ''), $inner, false);
 }
 
 /* Textová verzia pre e-mailové programy bez HTML. */
