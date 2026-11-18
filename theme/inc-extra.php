@@ -132,10 +132,20 @@ add_action('login_init', function () {
 	wp_redirect('https://' . YC_CANONICAL_HOST . $uri, 301, 'Your Choice');
 	exit;
 }, 0);
+/* Adresa webu je vždy https://www.yourchoice.sk – štýly, obrázky aj odkazy sa načítajú bezpečne. */
 foreach (['option_home', 'option_siteurl'] as $yc_opt) add_filter($yc_opt, function ($v) {
-	$h = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
-	return ($h === YC_CANONICAL_HOST) ? 'https://' . YC_CANONICAL_HOST : $v;
+	return 'https://' . YC_CANONICAL_HOST;
 }, 99);
+/* Po každom nasadení novej verzie témy vyprázdni cache (LiteSpeed), aby návštevníci nevideli starú verziu. */
+add_action('init', function () {
+	$ver = wp_get_theme()->get('Version');
+	if (get_option('yc_cache_ver') === $ver) return;
+	update_option('yc_cache_ver', $ver, false);
+	update_option('home', 'https://' . YC_CANONICAL_HOST);
+	update_option('siteurl', 'https://' . YC_CANONICAL_HOST);
+	do_action('litespeed_purge_all');
+	if (function_exists('wp_cache_flush')) wp_cache_flush();
+}, 30);
 
 /* Odosielanie e-mailov z webu cez schránku web@yourchoice.sk u M7 (Platon).
    Heslo zadá správca v administrácii: Nastavenia → E-mail webu. Do kódu sa heslo nikdy neukladá. */
