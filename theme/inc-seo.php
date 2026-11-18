@@ -201,3 +201,9 @@ function yc_references() {
 		['Preklady na vysokej úrovni, ústretovosť a vždy dodržaný termín.', 'Martina Nováková · ELPAM real'],
 	];
 }
+
+/* Overovací súbor Google Search Console ako skutočný súbor v koreni webu. */
+add_action('init', function () {
+	$f = ABSPATH . 'google0ea1a51d979e7e18.html';
+	if (!is_file($f)) @file_put_contents($f, 'google-site-verification: google0ea1a51d979e7e18.html');
+}, 21);
