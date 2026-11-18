@@ -2,7 +2,7 @@
 Theme Name: Your Choice
 Description: Web Your Choice – jazykové služby pre firmy.
 Author: Claude
-Version: 1.7.10
+Version: 1.8.0
 Text Domain: yourchoice
 */
 html{scroll-behavior:smooth}
@@ -55,3 +55,34 @@ input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 .yc-table th,.yc-table td{text-align:left;padding:12px 14px;border-bottom:1px solid #ECE7DC;vertical-align:top}
 .yc-table th{background:#14213D;color:#fff;font-weight:700}
 .yc-answer{background:#FDEBD3;border-radius:16px;padding:16px 20px;font-size:18px}
+/* Úvodný pás podstránok (rovnaký štýl ako domovská stránka) */
+.yc-hero{background:#14213D;color:#fff;position:relative;overflow:hidden}
+.yc-hero:after{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:#1C2D52}
+.yc-hero-in{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:44px 24px 52px;display:flex;align-items:center;gap:40px}
+.yc-hero-txt{flex:1 1 560px;min-width:0}
+.yc-hero.slim .yc-hero-in{padding:32px 24px 36px}
+.yc-hero h1{color:#fff;font-size:46px;line-height:1.08;margin:6px 0 14px;max-width:760px}
+.yc-hero.slim h1{font-size:38px}
+.yc-kicker{margin:0;color:#F59E1B;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.yc-crumbs{font-size:14px;color:#C9D1E3;margin-bottom:16px}
+.yc-crumbs a{color:#C9D1E3;text-decoration:none}.yc-crumbs a:hover{color:#fff;text-decoration:underline}
+.yc-crumbs span{margin:0 6px;color:#7F8AA6}
+.yc-hero-lead{font-size:20px;line-height:1.55;color:#D9DEEA;margin:0 0 22px;max-width:680px}
+.yc-hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin:0}
+.yc-hero-tel{color:#fff;font-weight:700;text-decoration:none}.yc-hero-tel:hover{color:#F59E1B}
+.yc-hero-art{flex:0 0 300px;margin:0;text-align:right}
+.yc-hero-art svg{width:300px;height:auto;display:block}
+.yc-hero-art figcaption{font-size:11px;color:#7F8AA6;margin-top:4px}
+.yc-page{padding-top:48px}
+/* Výzva na konci podstránok */
+.yc-endcta{background:#F3EFE6;border-top:1px solid #ECE7DC}
+.yc-endcta-in{max-width:1100px;margin:0 auto;padding:40px 24px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.yc-endcta-person{display:flex;align-items:center;gap:12px;font-size:15px;color:#4A5468}
+.yc-endcta-person b{color:#14213D}
+.yc-avatar{width:56px;height:56px;border-radius:50%;background:#14213D;color:#F59E1B;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;font-family:"Bricolage Grotesque",Inter,sans-serif}
+.yc-endcta-txt{flex:1 1 360px}
+.yc-endcta-txt h2{margin:0 0 4px;font-size:26px;line-height:1.2}
+.yc-endcta-txt p{margin:0;color:#4A5468}
+.yc-endcta-act{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.yc-endcta-tel{font-weight:700;text-decoration:none}
+@media (max-width:860px){.yc-hero-art{display:none}.yc-hero h1{font-size:34px!important}.yc-hero-in{padding:32px 20px 36px}.yc-hero-lead{font-size:18px}}

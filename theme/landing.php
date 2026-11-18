@@ -3,7 +3,7 @@ $k = $en ? esc_url('mailto:' . yc_email() . '?subject=' . rawurlencode('Translat
 $S = $en
  ? ['vat' => 'excl. VAT', 'meta' => 'no surcharge for specialised text · 10% discount from 10 standard pages', 'cta' => 'Get a quote within 24 h', 'h1' => 'What we translate most often', 'h2' => 'How we work', 'h3' => 'Frequently asked questions', 'b1' => 'Send us your document and we will reply with a price', 'b2' => 'You get the price and deadline within 24 hours on working days, with no obligation. Write to us in English, we reply in English.', 'b3' => 'Send an enquiry', 'also' => 'See also', 'all' => 'All translation services', 'allurl' => home_url('/en/')]
  : ['vat' => 'bez DPH', 'meta' => 'bez príplatku za odborný text · od 10 NS zľava 10 %', 'cta' => 'Získať cenovú ponuku do 24 h', 'h1' => 'Čo najčastejšie prekladáme', 'h2' => 'Ako pracujeme', 'h3' => 'Časté otázky', 'b1' => 'Pošlite nám dokument, ozveme sa s cenou', 'b2' => 'Cenu a termín máte do 24 hodín v pracovné dni, nezáväzne.', 'b3' => 'Poslať dopyt', 'also' => 'Pozrite aj', 'all' => 'Všetky služby', 'allurl' => home_url('/sluzby/')]; ?>
-<p style="font-size:20px;color:#4A5468"><?php echo esc_html($L['lead']); ?></p>
+<?php if (empty($GLOBALS['yc_hero_lead'])): ?><p style="font-size:20px;color:#4A5468"><?php echo esc_html($L['lead']); ?></p><?php endif; ?>
 <p><span class="yc-price"><?php echo esc_html($L['price']); ?> · <?php echo $S['vat']; ?></span> <span class="yc-meta"><?php echo esc_html($S['meta']); ?></span></p>
 <p><a class="yc-btn" href="<?php echo $k; ?>"><?php echo esc_html($S['cta']); ?></a> <a href="tel:+421915343261" style="margin-left:12px;font-weight:600">+421 915 343 261</a></p>
 
