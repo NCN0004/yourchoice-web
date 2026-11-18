@@ -36,7 +36,7 @@ get_header(); ?>
   <?php endif; ?>
  </div>
 </section>
-<article class="yc-page">
+<article class="yc-page yc-page-<?php echo esc_attr(str_replace('/', '-', $pg)); ?>">
 <?php include get_template_directory() . ($L ? '/landing.php' : '/pages/' . $pg . '.php'); ?>
 </article>
 <?php if (!$legal && !$en && $pg !== 'kontakt'): ?>

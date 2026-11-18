@@ -2,7 +2,7 @@
 Theme Name: Your Choice
 Description: Web Your Choice – jazykové služby pre firmy.
 Author: Claude
-Version: 2.0.1
+Version: 2.1.0
 Text Domain: yourchoice
 */
 html{scroll-behavior:smooth}
@@ -113,3 +113,25 @@ header a[href^="tel:"],header a.yc-btn{white-space:nowrap}
 .yc-cities b{font-size:20px;font-family:'Bricolage Grotesque',sans-serif}.yc-cities span{font-size:14px;color:#4A5468}
 .yc-local{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.yc-local .yc-card{margin:0}
 .yc-nap{margin-top:18px;border-left:4px solid #F59E1B}
+.yc-page-kontakt{max-width:1080px}
+.yc-kq{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:0 0 24px}
+.yc-kq-i{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #ECE7DC;border-radius:20px;padding:20px 22px;text-decoration:none;color:#14213D;transition:border-color .15s,transform .15s,box-shadow .15s}
+.yc-kq-i:hover{border-color:#F59E1B;transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,33,61,.08)}
+.yc-kq-i small{display:block;font-size:13px;color:#4A5468;font-weight:600;line-height:1.3}.yc-kq-i b{display:block;font-size:17px;line-height:1.35;word-break:break-word}
+.yc-kq-ic{flex:0 0 48px;width:48px;height:48px;border-radius:14px;background:#FDEBD3;color:#D9840F;display:flex;align-items:center;justify-content:center}
+.yc-kq-ic.wa{background:#DDF6E6;color:#1A9E4B}
+.yc-k2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.yc-kc{background:#fff;border:1px solid #ECE7DC;border-radius:24px;padding:28px 30px}
+.yc-kc p{margin:0 0 14px}.yc-kc-label{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#D9840F;margin:0 0 16px!important}
+.yc-kperson{display:flex;align-items:center;gap:14px;margin:0 0 16px}.yc-kperson b{display:block;font-size:20px;line-height:1.2}.yc-kperson span:not(.yc-avatar){color:#4A5468;font-size:15px}
+.yc-kc-fast{background:#E3F2EF;color:#145C53;border-radius:12px;padding:10px 14px;font-size:15px}
+.yc-kaddr{display:flex;gap:14px;align-items:center;font-size:18px;line-height:1.4}
+.yc-khours{width:100%;border-collapse:collapse;margin:4px 0 14px;font-size:16px}.yc-khours th{text-align:left;font-weight:500;color:#4A5468;padding:8px 0;border-bottom:1px solid #ECE7DC}.yc-khours td{text-align:right;font-weight:700;padding:8px 0;border-bottom:1px solid #ECE7DC}
+.yc-klink{font-weight:700;color:#14213D}
+.yc-ksteps{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;counter-reset:ks}
+.yc-ksteps li{counter-increment:ks;background:#fff;border:1px solid #ECE7DC;border-radius:20px;padding:22px 22px 20px;position:relative}
+.yc-ksteps li::before{content:counter(ks);display:flex;width:34px;height:34px;border-radius:50%;background:#F59E1B;color:#14213D;font-weight:800;align-items:center;justify-content:center;margin-bottom:12px}
+.yc-ksteps b{display:block;font-size:18px;margin-bottom:4px}.yc-ksteps span{color:#4A5468;font-size:16px;line-height:1.55}
+.yc-kchips{display:flex;flex-wrap:wrap;gap:10px}.yc-kchips a{background:#fff;border:1px solid #ECE7DC;border-radius:999px;padding:8px 18px;text-decoration:none;font-weight:600;color:#14213D}.yc-kchips a:hover{border-color:#F59E1B}
+.yc-kbill dl{display:grid;grid-template-columns:170px 1fr;gap:10px 20px;margin:0;font-size:16px}.yc-kbill dt{color:#4A5468}.yc-kbill dd{margin:0}
+@media (max-width:560px){.yc-kbill dl{grid-template-columns:1fr;gap:2px}.yc-kbill dd{margin-bottom:10px}.yc-kc{padding:22px 20px}}
