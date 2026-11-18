@@ -6,7 +6,7 @@ E-mail: <a href="mailto:<?php echo esc_attr($e); ?>"><b><?php echo esc_html($e);
 Otvorené: pondelok – piatok 8:00 – 18:00<br>
 Odpovedáme v pracovné dni do 24 hodín.</p>
 <p>Na vaše dopyty odpovedá <b>Janka Kubičková</b>, projektová manažérka. Postará sa o celú zákazku od ponuky po dodanie.</p>
-<p><a href="https://wa.me/421915343261" target="_blank" rel="noopener">Napísať na WhatsApp</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Jazdeck%C3%A1+8686%2F65%2C+917+01+Trnava" target="_blank" rel="noopener">Ukázať na mape</a></p>
+<p><a href="https://wa.me/421915343261" target="_blank" rel="noopener">Napísať na WhatsApp</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Jazdeck%C3%A1+8686%2F65%2C+917+08+Trnava" target="_blank" rel="noopener">Ukázať na mape</a></p>
 <a class="yc-btn" href="<?php echo yc_anchor('kontakt'); ?>">Poslať dopyt cez formulár</a>
 </section>
 <section class="yc-card">
