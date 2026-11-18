@@ -3,13 +3,13 @@
 <!-- B2C pointer -->
 <div style="background: #14213D; color: #E7EBF3; font-size: 14px">
 <div style="max-width: 1200px; margin: 0 auto; padding: 9px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px">
-<span>ISO certifikát kvality · 22 rokov praxe · 25 jazykov</span>
+<span class="yc-top-claims">ISO certifikát kvality · 22 rokov praxe · 25 jazykov</span>
 <span>Súkromná osoba? Úradný preklad dokladov nájdete na <a href="https://uradnaprekladatelka.sk" style="color: #F59E1B; font-weight: 600">uradnaprekladatelka.sk</a></span>
 </div>
 </div>
 
 <!-- HEADER -->
-<header style="background: rgba(250,248,244,0.96); border-bottom: 1px solid #ECE7DC">
+<header style="position: relative; background: rgba(250,248,244,0.96); border-bottom: 1px solid #ECE7DC">
 <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="<?php echo esc_url(home_url('/')); ?>" aria-label="Your Choice – domov" style="display: flex; align-items: center; gap: 10px; text-decoration: none">
 <svg aria-hidden="true" viewBox="0 0 140 120" width="44" height="38"><path d="M10 14 h70 a12 12 0 0 1 12 12 v38 a12 12 0 0 1 -12 12 h-46 l-16 16 v-16 h-8 a12 12 0 0 1 -12 -12 v-38 a12 12 0 0 1 12 -12 z" fill="#14213D"></path><path d="M58 40 h70 a12 12 0 0 1 12 12 v38 a12 12 0 0 1 -12 12 h-8 v16 l-16 -16 h-46 a12 12 0 0 1 -12 -12 v-38 a12 12 0 0 1 12 -12 z" fill="#F59E1B" opacity="0.92"></path><path d="M60 62 L70 72 L88 52" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -26,7 +26,18 @@
 </nav>
 <div style="display: flex; align-items: center; gap: 14px">
 <a href="tel:+421915343261" style="font-weight: 600; font-size: 15px; text-decoration: none">+421 915 343 261</a>
-<a href="<?php echo yc_anchor('kontakt'); ?>" style="background: #F59E1B; color: #14213D; text-decoration: none; padding: 12px 20px; border-radius: 12px; font-weight: 700; font-size: 15px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Dopyt – odpoveď do 24 h</a>
+<a href="<?php echo yc_anchor('kontakt'); ?>" style="background: #F59E1B; color: #14213D; text-decoration: none; padding: 12px 20px; border-radius: 12px; font-weight: 700; font-size: 15px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Dopyt<span class="yc-btn-long">&nbsp;– odpoveď do 24 h</span></a>
+<details class="yc-mnav"><summary aria-label="Menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/></svg></summary>
+<div class="yc-mnav-panel">
+<a href="<?php echo yc_anchor('sluzby'); ?>">Služby</a>
+<a href="<?php echo yc_anchor('odvetvia'); ?>">Odvetvia</a>
+<a href="<?php echo yc_anchor('proces'); ?>">Ako pracujeme</a>
+<a href="<?php echo esc_url(home_url('/referencie/')); ?>">Referencie</a>
+<a href="<?php echo esc_url(home_url('/novinky/')); ?>">Odborné novinky</a>
+<a href="<?php echo yc_anchor('kontakt'); ?>">Kontakt</a>
+<a href="tel:+421915343261">+421 915 343 261</a>
+<?php if (yc_is_en()): ?><a href="<?php echo esc_url(home_url('/')); ?>" lang="sk">Slovensky</a><?php else: ?><a href="<?php echo esc_url(home_url('/en/')); ?>" lang="en">English</a><?php endif; ?>
+</div></details>
 </div>
 </div>
 </header>

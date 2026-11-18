@@ -2,7 +2,7 @@
 Theme Name: Your Choice
 Description: Web Your Choice – jazykové služby pre firmy.
 Author: Claude
-Version: 1.9.1
+Version: 1.9.2
 Text Domain: yourchoice
 */
 html{scroll-behavior:smooth}
@@ -103,3 +103,7 @@ header a[href^="tel:"],header a.yc-btn{white-space:nowrap}
 .yc-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:12px 0 20px}
 .yc-stats div{background:#14213D;border-radius:16px;padding:18px;color:#D9DEEA;font-size:14px}
 .yc-stats b{display:block;font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:32px;color:#F59E1B;line-height:1.1}
+
+@media (max-width:560px){.yc-top-claims{display:none}header a[href^="tel:"]{display:none!important}.yc-btn-long{display:none}header>div{flex-wrap:nowrap!important;padding:12px 16px!important}}
+.yc-mnav{display:none}
+@media (max-width:760px){.yc-mnav{display:block}.yc-mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid #ECE7DC;border-radius:12px;background:#fff}.yc-mnav summary::-webkit-details-marker{display:none}.yc-mnav-panel{position:absolute;left:0;right:0;top:100%;background:#FAF8F4;border-bottom:1px solid #ECE7DC;box-shadow:0 12px 24px rgba(20,33,61,.12);z-index:60;padding:8px 16px 16px;display:flex;flex-direction:column}.yc-mnav-panel a{padding:14px 4px;border-bottom:1px solid #ECE7DC;text-decoration:none;font-weight:600;font-size:17px;color:#14213D}.yc-mnav-panel a:last-child{border-bottom:0}}
