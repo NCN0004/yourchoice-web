@@ -4,7 +4,7 @@
 <div style="background: #14213D; color: #E7EBF3; font-size: 14px">
 <div style="max-width: 1200px; margin: 0 auto; padding: 9px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px">
 <span class="yc-top-claims">ISO certifikát kvality · 22 rokov praxe · 25 jazykov</span>
-<span>Súkromná osoba? Úradný preklad dokladov nájdete na <a href="https://uradnaprekladatelka.sk" style="color: #F59E1B; font-weight: 600">uradnaprekladatelka.sk</a></span>
+<span>Odborné a úradné preklady pre firmy · odpoveď do 24 hodín</span>
 </div>
 </div>
 

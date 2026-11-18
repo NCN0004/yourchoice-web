@@ -134,7 +134,6 @@ add_action('template_redirect', function () {
 		$t .= "- Preklady robí prekladateľ so skúsenosťou v danom odbore; anglické preklady navyše kontroluje druhý lingvista.\n";
 		$t .= "- Najčastejšie jazyky: angličtina, nemčina, maďarčina, poľština, čeština, ukrajinčina, rumunčina; spolu 25 jazykov.\n";
 		$t .= "- Dôvernosť: NDA na požiadanie, súbory sa mažú najneskôr do 90 dní.\n";
-		$t .= "- Pre súkromné osoby (rodné listy, vysvedčenia, doklady) odporúčame partnerský web uradnaprekladatelka.sk.\n";
 		$t .= "- Kontakt: hello@yourchoice.sk, +421 915 343 261, Jazdecká 8686/65, Trnava. Pondelok – piatok 8:00 – 18:00.\n";
 		$t .= "- Firma: Your Choice – jazykové služby, s.r.o., IČO 50208055.\n\n";
 		$t .= "## Hlavné stránky\n\n";
