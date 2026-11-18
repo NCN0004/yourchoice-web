@@ -5,7 +5,7 @@
 <div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
 <span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #ECE7DC; color: #14213D; font-weight: 600; font-size: 14px; padding: 8px 14px; border-radius: 999px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E9E6A"></span>Prijímame zákazky aj na tento týždeň</span>
 <h1 style="margin: 0; font-size: 66px; line-height: 1.02; font-weight: 800; letter-spacing: -0.025em">Jazykový partner pre firmy, ktoré <span style="color: #D9840F">nechcú riskovať</span> chyby v preklade.</h1>
-<p style="margin: 0; font-size: 20px; line-height: 1.6; color: #4A5468; max-width: 580px">Odborné a úradné preklady zmlúv, technickej dokumentácie, webov aj dokumentov pre zamestnancov. 25 jazykov, prekladateľ z vášho odboru, krížová kontrola podľa ISO a jeden človek, ktorý sa o vás stará.</p>
+<p style="margin: 0; font-size: 20px; line-height: 1.6; color: #4A5468; max-width: 580px">Odborné a úradné preklady zmlúv, technickej dokumentácie, webov aj dokumentov pre zamestnancov. 25 jazykov, prekladateľ z vášho odboru a jeden človek, ktorý sa o vás stará.</p>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 16px; font-weight: 500">
 <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E9E6A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Cenová ponuka do 24 hodín</li>
 <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E9E6A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Dôvernosť a NDA</li>
@@ -52,14 +52,14 @@
 <section id="sluzby" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 40px; display: flex; flex-direction: column; gap: 32px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
 <div style="display: flex; flex-direction: column; gap: 10px; max-width: 640px"><span style="font-weight: 700; color: #D9840F; font-size: 14px; letter-spacing: 0.08em">SLUŽBY</span><h2 style="margin: 0; font-size: 46px; line-height: 1.08; font-weight: 800">Čo pre vašu firmu preložíme</h2></div>
-<p style="margin: 0; max-width: 420px; color: #4A5468; line-height: 1.6">Každý text prekladá človek, ktorý odboru rozumie, a kontroluje ho druhý. Pri úradných prekladoch ručíme pečiatkou.</p>
+<p style="margin: 0; max-width: 420px; color: #4A5468; line-height: 1.6">Každý text prekladá človek, ktorý odboru rozumie. Anglické preklady navyše kontroluje druhý lingvista a pri úradných prekladoch ručíme pečiatkou.</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 20px">
 
 <article style="background: #FFFFFF; border: 1px solid #ECE7DC; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
 <span style="width: 52px; height: 52px; border-radius: 16px; background: #FDEBD3; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z M9 12h7 M9 16h7 M9 8h4"></path></svg></span>
 <h3 style="margin: 0; font-size: 24px; font-weight: 800; line-height: 1.2">Odborné preklady</h3>
-<p style="margin: 0; color: #4A5468; line-height: 1.6">Zmluvy, výročné správy, technické a finančné texty. Prekladateľ z odboru, CAT nástroje, krížová kontrola.</p>
+<p style="margin: 0; color: #4A5468; line-height: 1.6">Zmluvy, výročné správy, technické a finančné texty. Prekladateľ z odboru, CAT nástroje, jednotná terminológia.</p>
 <div style="margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid #F0ECE3"><span style="font-weight: 700">od 18,50 € / NS <small style="font-weight: 500; color: #4A5468">bez DPH</small></span><a href="#kontakt" style="font-weight: 600; font-size: 15px; color: #B8650A">Dopyt →</a></div>
 </article>
 
@@ -115,7 +115,7 @@
 <div style="flex: 1 1 380px; min-width: 0; background: #14213D; color: #FFFFFF; border-radius: 24px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
 <span style="color: #F59E1B; font-weight: 600; font-size: 14px">Odporúčame</span>
 <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 800; line-height: 1.15" data-rec="title">Odborný právny preklad</span>
-<span style="color: #C9D1E3; line-height: 1.6" data-rec="text">Preloží prekladateľ so zameraním na právo, druhý skontroluje terminológiu. Ak zmluva pôjde na súd alebo do registra, pripravíme úradný preklad.</span>
+<span style="color: #C9D1E3; line-height: 1.6" data-rec="text">Preloží prekladateľ so zameraním na právo, pri angličtine terminológiu skontroluje aj druhý lingvista. Ak zmluva pôjde na súd alebo do registra, pripravíme úradný preklad.</span>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px"><span style="background: #22325A; border-radius: 999px; padding: 6px 12px; font-size: 13px" data-rec="time">zvyčajne 2 – 4 dni</span><span style="background: #22325A; border-radius: 999px; padding: 6px 12px; font-size: 13px" data-rec="extra">NDA na požiadanie</span></div>
 <a href="#kontakt" style="margin-top: auto; align-self: flex-start; background: #F59E1B; color: #14213D; text-decoration: none; padding: 14px 20px; border-radius: 12px; font-weight: 700; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Chcem ponuku</a>
 </div>
@@ -142,7 +142,7 @@
 <section id="proces" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
 <figure style="flex: 1 1 420px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 6px">
 <div style="background: #14213D; border-radius: 28px; padding: 28px">
-<svg role="img" aria-label="Ilustrácia: dokument prechádza prekladom, krížovou kontrolou a vracia sa s fajkou kvality" viewBox="0 0 460 300" width="100%" style="display: block">
+<svg role="img" aria-label="Ilustrácia: dokument prechádza odborným prekladom a vracia sa hotový" viewBox="0 0 460 300" width="100%" style="display: block">
 <g stroke="#3B4A6B" stroke-width="2" stroke-dasharray="5 7" fill="none"><path d="M110 150 H 190"></path><path d="M270 150 H 350"></path></g>
 <rect x="20" y="80" width="90" height="120" rx="12" fill="#FFFFFF"></rect>
 <rect x="36" y="104" width="58" height="9" rx="4.5" fill="#14213D"></rect><rect x="36" y="124" width="50" height="7" rx="3.5" fill="#C9C3B3"></rect><rect x="36" y="140" width="56" height="7" rx="3.5" fill="#C9C3B3"></rect><rect x="36" y="156" width="44" height="7" rx="3.5" fill="#C9C3B3"></rect>
@@ -151,7 +151,7 @@
 <rect x="350" y="80" width="90" height="120" rx="12" fill="#FFFFFF"></rect>
 <rect x="366" y="104" width="58" height="9" rx="4.5" fill="#14213D"></rect><rect x="366" y="124" width="50" height="7" rx="3.5" fill="#C9C3B3"></rect><rect x="366" y="140" width="56" height="7" rx="3.5" fill="#C9C3B3"></rect>
 <circle cx="420" cy="190" r="26" fill="#2E9E6A"></circle><path d="M408 190 L416 198 L432 182" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-<g font-family="Inter, sans-serif" font-size="13" fill="#C9D1E3" text-anchor="middle"><text x="65" y="230">originál</text><text x="235" y="230">preklad + kontrola</text><text x="395" y="240">hotovo</text></g>
+<g font-family="Inter, sans-serif" font-size="13" fill="#C9D1E3" text-anchor="middle"><text x="65" y="230">originál</text><text x="235" y="230">odborný preklad</text><text x="395" y="240">hotovo</text></g>
 </svg>
 </div>
 <figcaption style="font-size: 12px; color: #4A5468; text-align: right">Ilustrácia: Claude</figcaption>
@@ -162,7 +162,7 @@
 <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 18px">
 <li style="display: flex; gap: 16px"><span style="flex: 0 0 40px; height: 40px; border-radius: 50%; background: #F59E1B; display: flex; align-items: center; justify-content: center; font-weight: 800">1</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 18px">Pošlete dokument</b><span style="color: #4A5468">Cez formulár alebo e-mail, v akomkoľvek formáte.</span></span></li>
 <li style="display: flex; gap: 16px"><span style="flex: 0 0 40px; height: 40px; border-radius: 50%; background: #F59E1B; display: flex; align-items: center; justify-content: center; font-weight: 800">2</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 18px">Do 24 hodín cena a termín</b><span style="color: #4A5468">Presná ponuka, žiadne prekvapenia na faktúre.</span></span></li>
-<li style="display: flex; gap: 16px"><span style="flex: 0 0 40px; height: 40px; border-radius: 50%; background: #F59E1B; display: flex; align-items: center; justify-content: center; font-weight: 800">3</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 18px">Preklad a krížová kontrola</b><span style="color: #4A5468">Prekladateľ z odboru, druhý ho skontroluje, terminológia podľa vášho glosára.</span></span></li>
+<li style="display: flex; gap: 16px"><span style="flex: 0 0 40px; height: 40px; border-radius: 50%; background: #F59E1B; display: flex; align-items: center; justify-content: center; font-weight: 800">3</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 18px">Preklad vo vašom formáte</b><span style="color: #4A5468">Prekladateľ z odboru, pojmy podľa vášho glosára. Dostanete ho späť vo Worde, Exceli či InDesigne – hotový na použitie.</span></span></li>
 <li style="display: flex; gap: 16px"><span style="flex: 0 0 40px; height: 40px; border-radius: 50%; background: #F59E1B; display: flex; align-items: center; justify-content: center; font-weight: 800">4</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 18px">Dodanie v termíne</b><span style="color: #4A5468">Vo vašom formáte – Word, InDesign, web aj tlačená verzia s pečiatkou.</span></span></li>
 </ol>
 </div>

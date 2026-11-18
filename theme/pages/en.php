@@ -18,7 +18,7 @@
 <h2>How it works</h2>
 <section class="yc-card"><h3 style="margin-top:0">1. Send us the document</h3><p style="margin-bottom:0">By e-mail, in any common format. Tell us the target language and when you need it.</p></section>
 <section class="yc-card"><h3 style="margin-top:0">2. You get a price and a deadline</h3><p style="margin-bottom:0">Within 24 hours on working days, with no obligation.</p></section>
-<section class="yc-card"><h3 style="margin-top:0">3. Translation and second check</h3><p style="margin-bottom:0">A translator experienced in your field translates the text and a second linguist checks it.</p></section>
+<section class="yc-card"><h3 style="margin-top:0">3. Translation</h3><p style="margin-bottom:0">A translator experienced in your field translates the text. English translations are additionally checked by a second linguist.</p></section>
 
 <section class="yc-card" style="background:#14213D;color:#fff;border:0">
 <h2 style="color:#fff">Write to us in English</h2>

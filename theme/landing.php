@@ -20,7 +20,7 @@ $S = $en
 <ol class="yc-steps">
 <li><b>Pošlete nám dokument</b> cez formulár alebo e-mailom, v ľubovoľnom bežnom formáte.</li>
 <li><b>Do 24 hodín máte cenu a termín.</b> Nezáväzne, v pracovné dni.</li>
-<li><b>Prekladá odborník, kontroluje druhý lingvista.</b> Preklad dostanete vo formáte, v akom ste ho poslali.</li>
+<li><b>Prekladá odborník z vášho odboru.</b> Pri angličtine preklad navyše skontroluje druhý lingvista. Preklad dostanete vo formáte, v akom ste ho poslali.</li>
 </ol>
 <h2>Koľko to bude stáť</h2>
 <p>Cena = počet normostrán × sadzba. Normostrana má 1 800 znakov vrátane medzier, čo je zhruba dve tretiny strany A4.</p>

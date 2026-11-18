@@ -4,7 +4,7 @@
 <section class="yc-card" id="odborne">
 <h2>Odborné preklady</h2>
 <p><span class="yc-price">od 18,50 € / NS bez DPH</span> <span class="yc-meta">bez príplatku za odborný text</span></p>
-<p>Zmluvy, obchodná korešpondencia, finančné výkazy, tendre, prezentácie a technické texty. Prekladá prekladateľ, ktorý sa v odbore vyzná, a každý text prejde druhou kontrolou. Terminológiu si pamätáme, takže váš ďalší preklad znie rovnako.</p>
+<p>Zmluvy, obchodná korešpondencia, finančné výkazy, tendre, prezentácie a technické texty. Prekladá prekladateľ, ktorý sa v odbore vyzná; anglické preklady navyše prejdú kontrolou druhého lingvistu. Terminológiu si pamätáme, takže váš ďalší preklad znie rovnako.</p>
 <p class="yc-meta">Vhodné pre: obchod, právo, financie, stavebníctvo, IT</p>
 <a class="yc-btn" href="<?php echo $k; ?>">Chcem ponuku na odborný preklad</a>
 </section>

@@ -123,7 +123,7 @@ add_action('template_redirect', function () {
 		$t .= "- Odborný preklad: od 18,50 € za normostranu bez DPH (normostrana = 1 800 znakov vrátane medzier). Bez príplatku za odborný text.\n";
 		$t .= "- Úradný preklad s pečiatkou úradného prekladateľa: od 25 € za normostranu bez DPH.\n";
 		$t .= "- Zľavy: od 10 normostrán 10 %, od 30 normostrán 15 %. Expres do 24 hodín (do 5 normostrán): príplatok 50 %.\n";
-		$t .= "- Každý preklad robí prekladateľ so skúsenosťou v odbore a kontroluje ho druhý lingvista.\n";
+		$t .= "- Preklady robí prekladateľ so skúsenosťou v danom odbore; anglické preklady navyše kontroluje druhý lingvista.\n";
 		$t .= "- Najčastejšie jazyky: angličtina, nemčina, maďarčina, poľština, čeština, ukrajinčina, rumunčina; spolu 25 jazykov.\n";
 		$t .= "- Dôvernosť: NDA na požiadanie, súbory sa mažú najneskôr do 90 dní.\n";
 		$t .= "- Pre súkromné osoby (rodné listy, vysvedčenia, doklady) odporúčame partnerský web uradnaprekladatelka.sk.\n";

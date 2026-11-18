@@ -42,7 +42,7 @@ function yc_mail_customer($kind, $f, $nr, $nfiles) {
 	} else {
 		$title = 'Váš dopyt sme prijali';
 		$lead = 'Ďakujeme, že ste sa obrátili na Your Choice. Dokumenty si pozrieme a do 24 hodín v pracovné dni vám pošleme presnú cenu a termín. Ponuka je nezáväzná.';
-		$steps = [['Posúdime dokument', 'jazyk, odbor, rozsah a formát'], ['Pošleme cenu a termín', 'do 24 hodín v pracovné dni'], ['Po vašom potvrdení prekladáme', 'odborník z odboru, kontrola druhým lingvistom']];
+		$steps = [['Posúdime dokument', 'jazyk, odbor, rozsah a formát'], ['Pošleme cenu a termín', 'do 24 hodín v pracovné dni'], ['Po potvrdení prekladáme', 'odborník z vášho odboru, preklad dostanete v rovnakom formáte, v akom ste ho poslali – Word, Excel, InDesign, hotový na použitie']];
 		$subject = 'Váš dopyt č. ' . $nr . ' sme prijali – Your Choice';
 	}
 	$rows = ['Číslo dopytu' => $nr];
