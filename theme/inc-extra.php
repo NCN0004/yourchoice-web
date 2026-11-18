@@ -108,7 +108,7 @@ add_action('yc_dopyty_cleanup', function () {
 });
 
 /* Odosielateľ e-mailov z webu. */
-add_filter('wp_mail_from_name', function () { return 'Your Choice – web'; });
+add_filter('wp_mail_from_name', function () { return 'Your Choice – preklady pre firmy'; });
 
 /* Anglické stránky: jazyk dokumentu. */
 add_filter('language_attributes', function ($o) { return yc_is_en() ? 'lang="en-GB"' : $o; });
@@ -158,7 +158,7 @@ add_action('phpmailer_init', function ($m) {
 	$m->Password = $c['pass'];
 	$m->Port = $c['port'];
 	$m->SMTPSecure = $c['secure'];
-	$m->setFrom($c['user'], 'Your Choice – web', false);
+	$m->setFrom($c['user'], 'Your Choice – preklady pre firmy', false);
 	$m->Sender = $c['user'];
 });
 add_action('wp_mail_failed', function ($e) { update_option('yc_smtp_last_error', current_time('mysql') . ' – ' . $e->get_error_message(), false); });
