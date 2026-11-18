@@ -67,6 +67,7 @@ add_action('parse_request', function ($wp) {
 	$path = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
 	if ($path === 'sitemap.xml' || $path === 'sitemap_index.xml') $wp->query_vars = ['yc_file' => 'sitemap'];
 	elseif ($path === 'llms.txt') $wp->query_vars = ['yc_file' => 'llms'];
+	elseif ($path === 'google0ea1a51d979e7e18.html') { header('Content-Type: text/html; charset=UTF-8'); echo 'google-site-verification: google0ea1a51d979e7e18.html'; exit; }
 }, 1);
 add_filter('wp_sitemaps_enabled', '__return_false');
 add_filter('redirect_canonical', function ($u) { return get_query_var('yc_file') ? false : $u; });
