@@ -164,15 +164,15 @@ function yc_handle_form() {
 	$post_id = wp_insert_post(['post_type' => 'yc_dopyt', 'post_status' => 'private', 'post_title' => $subject, 'post_content' => $body . ($files ? "\n\n" . implode("\n", $files) : '')]);
 	if ($post_id) update_post_meta($post_id, 'yc_kind', $kind);
 
-	$headers = [];
+	$nr = 'YC-' . date('Y') . '-' . str_pad((string) ($post_id ?: wp_rand(1000, 9999)), 4, '0', STR_PAD_LEFT);
+	if ($post_id) { update_post_meta($post_id, 'yc_nr', $nr); wp_update_post(['ID' => $post_id, 'post_title' => $nr . ' · ' . $subject]); }
+	$headers = ['Content-Type: text/html; charset=UTF-8'];
 	if (!empty($f['email'])) $headers[] = 'Reply-To: ' . (!empty($f['meno']) ? $f['meno'] . ' ' : '') . '<' . $f['email'] . '>';
-	wp_mail(yc_notify_email(), '[yourchoice.sk] ' . $subject, $body, $headers, $paths);
+	wp_mail(yc_notify_email(), '[yourchoice.sk] ' . $nr . ' · ' . $subject, yc_mail_team($kinds[$kind], $f, $nr, count($files), esc_url_raw($back), admin_url('edit.php?post_type=yc_dopyt')), $headers, $paths);
 
 	if (!empty($f['email']) && $kind !== 'zavolajte') {
-		$reply = $kind === 'cennik'
-			? "Dobrý deň,\n\nďakujeme za záujem. Cenník prekladov pre firmy vám pošleme do 24 hodín.\n\nS pozdravom\nYour Choice – jazykové služby\n+421 915 343 261"
-			: "Dobrý deň,\n\nďakujeme, váš dopyt sme prijali. Cenovú ponuku a termín vám pošleme do 24 hodín v pracovné dni.\n\nS pozdravom\nYour Choice – jazykové služby\n+421 915 343 261";
-		wp_mail($f['email'], 'Your Choice – prijali sme váš dopyt', $reply, ['Reply-To: ' . yc_notify_email()]);
+		list($csubj, $chtml) = yc_mail_customer($kind, $f, $nr, count($files));
+		wp_mail($f['email'], $csubj, $chtml, ['Content-Type: text/html; charset=UTF-8', 'Reply-To: Your Choice <' . yc_notify_email() . '>']);
 	}
 	wp_safe_redirect(home_url('/dakujeme/?typ=' . $kind));
 	exit;
@@ -182,3 +182,4 @@ function yc_handle_form() {
 add_filter('manage_yc_dopyt_posts_columns', function ($c) { return ['cb' => $c['cb'], 'title' => 'Dopyt', 'date' => 'Prijaté']; });
 require_once __DIR__ . '/inc-extra.php';
 require_once __DIR__ . '/inc-seo.php';
+require_once __DIR__ . '/inc-mail.php';
