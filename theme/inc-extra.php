@@ -176,3 +176,12 @@ add_action('admin_menu', function () {
 		echo '<p><button class="button button-primary" name="yc_smtp_save" value="1">Uložiť heslo</button> <button class="button" name="yc_smtp_test" value="1">Poslať testovací e-mail</button></p></form></div>';
 	});
 });
+
+/* Nové logo aj pre aplikácie, ktoré čítajú /favicon.ico z koreňa webu: skopíruje ikonu z témy, keď sa líši. */
+add_action('init', function () {
+	$src = get_template_directory() . '/favicon.ico';
+	$dst = ABSPATH . 'favicon.ico';
+	if (!is_readable($src)) return;
+	if (get_option('yc_favicon_md5') === md5_file($src) && is_file($dst)) return;
+	if (@copy($src, $dst)) update_option('yc_favicon_md5', md5_file($src), false);
+}, 20);
