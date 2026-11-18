@@ -20,4 +20,9 @@ Jazdecká 8686/65<br>917 08 Trnava<br>Slovenská republika</p>
 <h2>Úradný preklad: ako odovzdať originál</h2>
 <p>Úradný preklad sa pripája k originálu alebo k overenej kópii dokumentu. Originál môžete priniesť osobne na Jazdeckú v Trnave (vopred zavolajte), poslať poštou alebo kuriérom. Hotový preklad vám pošleme poštou, kuriérom alebo si ho vyzdvihnete osobne.</p>
 </section>
+<section class="yc-card">
+<h2>Pre firmy z regiónu</h2>
+<p>Kanceláriu máme v Trnave. Odborné preklady odovzdávame elektronicky, takže vzdialenosť nehrá rolu. Najčastejšie prekladáme pre firmy z týchto miest:</p>
+<p><?php echo implode(' · ', array_map(function ($cs, $cx) { return '<a href="' . esc_url(home_url('/' . $cs . '/')) . '">Preklady ' . esc_html($cx['city']) . '</a>'; }, array_keys(yc_cities()), yc_cities())); ?></p>
+</section>
 <p class="yc-meta">Ste súkromná osoba a potrebujete úradný preklad dokladov? Navštívte <a href="https://uradnaprekladatelka.sk">uradnaprekladatelka.sk</a>.</p>

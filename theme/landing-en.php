@@ -1,7 +1,7 @@
 <?php
 /* English landing pages (for foreign managers of companies in Slovakia). New page = new entry. */
 return [
-'en/translations-for-manufacturing' => ['g' => 'eo', 'lang' => 'en', 'sk' => 'preklady-pre-vyrobu', 'n' => 'Manufacturing & engineering', 't' => 'Translations for manufacturing and engineering companies in Slovakia',
+'en/translations-for-manufacturing' => ['g' => 'eo', 'lang' => 'en', 'sk' => 'preklady-pre-vyrobu', 'n' => 'Manufacturing & engineering', 't' => 'Translations for manufacturing companies in Slovakia',
  'd' => 'Technical translations to and from Slovak for manufacturers: manuals, data sheets, machine documentation, safety instructions. Specialist translator from your field.',
  'lead' => 'Manuals, data sheets and machine documentation translated so that operators, service technicians and customers all understand them.',
  'items' => ['operating and maintenance manuals', 'technical data sheets and specifications', 'labels, packaging and safety warnings', 'machine and production line documentation', 'declarations of conformity and certificates', 'work procedures and health & safety instructions for employees'],
@@ -16,14 +16,14 @@ return [
  'price' => 'depends on volume, specialised translation from €18.50 per standard page',
  'faq' => [['Can you translate directly in Excel or in our customer’s form?', 'Yes. You get the translation in the same file, ready to forward.'], ['Which languages do you work with?', 'We work with 25 languages. In automotive most often English, German, French, Hungarian and Polish, always in combination with Slovak.']]],
 'en/translations-for-construction' => ['g' => 'eo', 'lang' => 'en', 'sk' => 'preklady-pre-stavebnictvo', 'n' => 'Construction & real estate', 't' => 'Translations for construction and real estate in Slovakia',
- 'd' => 'Specialised and certified translations for construction companies: contracts for work, project documentation, site supervision reports, tenders. Quote within 24 hours.',
+ 'd' => 'Specialised and certified translations for construction companies: contracts, project documentation, site supervision reports, tenders. Quote within 24 h.',
  'lead' => 'Contracts for work, project documentation and site reports in a language the investor, the contractor and the authority all understand.',
  'items' => ['contracts for work and subcontractor agreements', 'project and technical documentation', 'site supervision reports and minutes of site meetings', 'tender documents and bids', 'expert opinions, certificates and declarations of performance', 'purchase and lease agreements for real estate'],
  'why' => [['A translator who knows construction', 'Technical texts are translated by a person with experience in the field, not word for word.'], ['The same terms across the whole project', 'For long-running projects we keep a glossary so the terms in the contract, the design and the reports match.'], ['Certified translation when you need it', 'Documents for authorities, courts and banks are delivered with the stamp of a sworn translator.']],
  'price' => 'from €18.50 per standard page, certified translation from €25 per standard page',
  'faq' => [['Can you translate on a rolling basis, for example monthly reports?', 'Yes. For regular work we agree a fixed procedure and deadlines so you always have the translation on time.'], ['In what format will we receive the translation?', 'In the format you sent us. For drawings and special formats we agree the details in advance.']]],
 'en/legal-translations' => ['g' => 'eo', 'lang' => 'en', 'sk' => 'pravne-preklady', 'n' => 'Legal & contracts', 't' => 'Legal translations for companies and law firms in Slovakia',
- 'd' => 'Legal translations of contracts, articles of association, powers of attorney and court filings. Specialised and certified translation, confidentiality and NDA on request.',
+ 'd' => 'Legal translations of contracts, articles of association, powers of attorney and court filings. Certified translation and NDA on request.',
  'lead' => 'Contracts, articles of association and court filings where every word matters. Translated by a person who specialises in law.',
  'items' => ['commercial, employment and lease contracts', 'articles of association, founding documents and minutes', 'powers of attorney and affidavits', 'court filings, judgments and resolutions', 'general terms and conditions', 'internal policies and compliance documents'],
  'why' => [['Accuracy before elegance', 'We translate legal text faithfully, with precise legal terminology. English translations are also checked by a second linguist.'], ['Specialised or certified', 'For a negotiation a specialised translation is enough. For a court, an authority or the commercial register we prepare a certified translation with a stamp.'], ['Discretion', 'We handle your documents in confidence. We sign an NDA on request.']],

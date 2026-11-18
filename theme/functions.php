@@ -25,14 +25,14 @@ function yc_pages() {
 		'sluzby' => ['Prekladové služby pre firmy', 'Odborné a úradné preklady, lokalizácia webov, dokumenty pre zamestnancov, technická dokumentácia a AI preklad s kontrolou. Cenová ponuka do 24 hodín.'],
 		'cennik' => ['Cenník prekladov pre firmy 2026', 'Cenník odborných a úradných prekladov pre firmy: od 18,50 € za normostranu, úradný preklad od 25 €. Zľavy pri objeme, expres do 24 hodín, príklady výpočtu.'],
 		'referencie' => ['Referencie a skúsenosti klientov', 'Čo hovoria klienti o prekladoch Your Choice: Arcadis, Slovenská pošta, ELPAM real. Odborné a úradné preklady pre firmy, 22 rokov praxe.'],
-		'kontakt' => ['Kontakt a fakturačné údaje', 'Kontakt na Your Choice – jazykové služby, s.r.o., Trnava. Telefón, e-mail a fakturačné údaje.'],
-		'ochrana-osobnych-udajov' => ['Ochrana osobných údajov', 'Ako Your Choice – jazykové služby, s.r.o. spracúva osobné údaje.'],
-		'cookies' => ['Cookies', 'Aké cookies používa web yourchoice.sk a ako zmeniť svoj súhlas.'],
-		'obchodne-podmienky' => ['Všeobecné obchodné podmienky', 'Všeobecné obchodné podmienky Your Choice – jazykové služby, s.r.o.'],
+		'kontakt' => ['Kontakt a fakturačné údaje', 'Kontakt na prekladateľskú agentúru Your Choice v Trnave: telefón +421 915 343 261, e-mail, adresa Jazdecká 8686/65, otváracie hodiny a fakturačné údaje.'],
+		'ochrana-osobnych-udajov' => ['Ochrana osobných údajov', 'Ako Your Choice – jazykové služby, s.r.o. spracúva osobné údaje klientov a návštevníkov webu, ako dlho ich uchováva a aké práva máte.'],
+		'cookies' => ['Zásady používania cookies', 'Aké cookies používa web yourchoice.sk, na čo slúžia, ako dlho platia a ako môžete svoj súhlas kedykoľvek zmeniť alebo odvolať.'],
+		'obchodne-podmienky' => ['Všeobecné obchodné podmienky', 'Všeobecné obchodné podmienky prekladateľskej agentúry Your Choice: objednávka, ceny, termíny, reklamácie a dôvernosť prekladov pre firmy.'],
 	];
 	$p['novinky'] = ['Odborné novinky pre firmy', 'Praktické články o prekladoch pre firmy: anglické zmluvy, dokumenty pre zahraničných zamestnancov, AI a strojový preklad.'];
 	foreach (yc_articles() as $s => $a) $p[$s] = [$a['t'], $a['d']];
-	$p['en'] = ['Translation services for companies in Slovakia', 'Specialised and certified translations to and from Slovak for companies: contracts, technical documentation, HR documents, websites. 25 languages, quote within 24 hours.'];
+	$p['en'] = ['Translation services for companies in Slovakia', 'Specialised and certified translations to and from Slovak for companies: contracts, technical documents, HR, websites. 25 languages, quote within 24 h.'];
 	foreach (yc_landing() as $s => $x) $p[$s] = [$x['t'], $x['d']];
 	return $p;
 }
