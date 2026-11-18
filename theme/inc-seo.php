@@ -14,6 +14,7 @@ function yc_home_faq() {
 		['Ako sa počíta cena prekladu?', 'Podľa normostrany (1 800 znakov vrátane medzier), jazyka a odboru. Odborné preklady od 18,50 €/NS, úradné od 25 €/NS (ceny bez DPH). Za odborný text si nič nepripočítavame. Od 10 normostrán máte zľavu 10 %, od 30 normostrán 15 %, pri rámcovej zmluve ešte nižšiu cenu.'],
 		['Aký je rozdiel medzi odborným a úradným prekladom?', 'Úradný preklad je zviazaný s dokumentom a má pečiatku úradného prekladateľa – vyžadujú ho súdy, úrady a obchodný register. Odborný preklad je na bežné firemné použitie a dá sa dodať elektronicky.'],
 		['Ako rýchlo to stihnete?', 'Presný termín dostanete spolu s cenou do 24 hodín. Väčšie zákazky rozdelíme medzi viacerých prekladateľov so spoločným glosárom, aby text pôsobil jednotne. Štandardný termín je bez príplatku, expres do 24 hodín (do 5 normostrán) je za príplatok 50 %.'],
+		['Pre ktoré mestá prekladáte?', 'Kanceláriu máme v Trnave. Najčastejšie prekladáme pre firmy z Trnavy, Bratislavy, Pezinka, Hlohovca, Piešťan a Senice, odborné preklady však dodávame elektronicky po celom Slovensku. Úradné preklady posielame poštou alebo si ich vyzdvihnete v Trnave.'],
 		['Sú naše dokumenty v bezpečí?', 'Áno. Podpíšeme NDA, súbory prenášame šifrovane a zo servera ich automaticky vymažeme najneskôr do 90 dní. Dôverné texty nikdy nevkladáme do verejných prekladačov.'],
 	];
 }
@@ -25,6 +26,13 @@ function yc_same_as() {
 		'https://www.instagram.com/yourchoice.sk',
 		'https://www.linkedin.com/company/145453598/',
 	];
+}
+
+/* Mestá, kde chceme byť nájdení (stránky preklady-<mesto>). */
+function yc_cities() {
+	$o = [];
+	foreach (yc_landing() as $s => $x) if (!empty($x['city'])) $o[$s] = $x;
+	return $o;
 }
 
 /* Typ stránky pre prehľady v Google Analytics. */
@@ -118,7 +126,7 @@ add_action('template_redirect', function () {
 		header('Content-Type: text/plain; charset=UTF-8');
 		$u = function ($s) { return home_url('/' . $s . '/'); };
 		$t = "# Your Choice – preklady pre firmy\n\n";
-		$t .= "> Your Choice – jazykové služby, s.r.o. je prekladateľská agentúra z Trnavy (Slovensko). Robí odborné a úradné preklady pre firmy, úrady a organizácie v 25 jazykoch, s 22-ročnou praxou. Cenovú ponuku posiela do 24 hodín v pracovné dni.\n\n";
+		$t .= "> Your Choice – jazykové služby, s.r.o. je prekladateľská agentúra z Trnavy (Slovensko) pre firmy z Trnavy, Bratislavy, Pezinka, Hlohovca, Piešťan, Senice a celého Slovenska. Robí odborné a úradné preklady pre firmy, úrady a organizácie v 25 jazykoch, s 22-ročnou praxou. Cenovú ponuku posiela do 24 hodín v pracovné dni.\n\n";
 		$t .= "## Kľúčové fakty\n\n";
 		$t .= "- Odborný preklad: od 18,50 € za normostranu bez DPH (normostrana = 1 800 znakov vrátane medzier). Bez príplatku za odborný text.\n";
 		$t .= "- Úradný preklad s pečiatkou úradného prekladateľa: od 25 € za normostranu bez DPH.\n";
@@ -133,7 +141,7 @@ add_action('template_redirect', function () {
 		$t .= "- [Služby](" . $u('sluzby') . "): prehľad služieb a kalkulačka ceny\n";
 		if (isset(yc_pages()['cennik'])) $t .= "- [Cenník prekladov](" . $u('cennik') . "): ceny, zľavy, príklady výpočtu\n";
 		$t .= "- [Kontakt](" . $u('kontakt') . "): kontakt a fakturačné údaje\n\n";
-		$groups = ['o' => 'Preklady podľa odvetvia', 'd' => 'Preklady podľa typu dokumentu', 'j' => 'Preklady podľa jazyka', 'l' => 'Lokálne', 'eo' => 'English pages'];
+		$groups = ['o' => 'Preklady podľa odvetvia', 'd' => 'Preklady podľa typu dokumentu', 'j' => 'Preklady podľa jazyka', 'l' => 'Mestá a regióny (kancelária v Trnave, služby pre Trnavský a Bratislavský kraj)', 'eo' => 'English pages'];
 		foreach ($groups as $g => $name) {
 			$rows = [];
 			foreach (yc_landing() as $s => $x) if ($x['g'] === $g) $rows[] = '- [' . $x['t'] . '](' . $u($s) . '): ' . $x['d'];
@@ -167,7 +175,7 @@ add_action('wp_head', function () {
 		$graph[] = ['@type' => 'BreadcrumbList', 'itemListElement' => $crumbs];
 		if (isset($L[$pg])) {
 			$x = $L[$pg];
-			$graph[] = ['@type' => 'Service', 'name' => $x['t'], 'description' => $x['d'], 'serviceType' => $en ? 'Translation' : 'Prekladateľské služby', 'provider' => ['@id' => home_url('/#firma')], 'areaServed' => ['@type' => 'Country', 'name' => 'Slovakia'], 'url' => home_url('/' . $pg . '/'), 'inLanguage' => $en ? 'en' : 'sk',
+			$graph[] = ['@type' => 'Service', 'name' => $x['t'], 'description' => $x['d'], 'serviceType' => $en ? 'Translation' : 'Prekladateľské služby', 'provider' => ['@id' => home_url('/#firma')], 'areaServed' => !empty($x['city']) ? ['@type' => 'City', 'name' => $x['city'], 'containedInPlace' => ['@type' => 'AdministrativeArea', 'name' => $x['kraj']]] : ['@type' => 'Country', 'name' => 'Slovakia'], 'url' => home_url('/' . $pg . '/'), 'inLanguage' => $en ? 'en' : 'sk',
 				'offers' => ['@type' => 'Offer', 'priceCurrency' => 'EUR', 'price' => '18.50', 'priceSpecification' => ['@type' => 'UnitPriceSpecification', 'price' => '18.50', 'priceCurrency' => 'EUR', 'unitText' => $en ? 'standard page' : 'normostrana', 'valueAddedTaxIncluded' => false]]];
 		}
 	}
@@ -179,6 +187,10 @@ add_filter('yc_org_schema', function ($org) {
 	$org['sameAs'] = yc_same_as();
 	$org['contactPoint'] = [['@type' => 'ContactPoint', 'telephone' => '+421915343261', 'email' => 'hello@yourchoice.sk', 'contactType' => 'customer service', 'availableLanguage' => ['sk', 'en']]];
 	$org['slogan'] = 'Odborné a úradné preklady pre firmy';
+	$org['areaServed'] = array_merge(array_values(array_map(function ($x) { return ['@type' => 'City', 'name' => $x['city']]; }, yc_cities())), [['@type' => 'Country', 'name' => 'Slovensko']]);
+	$org['hasMap'] = 'https://www.google.com/maps/search/?api=1&query=Your+Choice+jazykov%C3%A9+slu%C5%BEby+Jazdeck%C3%A1+8686%2F65+Trnava';
+	$org['logo'] = get_template_directory_uri() . '/apple-touch-icon.png';
+	$org['knowsAbout'] = ['odborný preklad', 'úradný preklad', 'právny preklad', 'technický preklad', 'lokalizácia webov', 'preklady pre automotive', 'preklady pre HR'];
 	return $org;
 });
 

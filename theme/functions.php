@@ -67,7 +67,7 @@ add_action('wp_head', function () {
 		echo '<meta name="description" content="' . esc_attr($pages[$pg][1]) . '">' . "
 ";
 	} elseif (yc_is_home()) {
-		echo '<meta name="description" content="Odborné a úradné preklady pre firmy v 25 jazykoch. Zmluvy, technická dokumentácia, weby a dokumenty pre zamestnancov. Cenová ponuka do 24 hodín.">' . "
+		echo '<meta name="description" content="Prekladateľská agentúra z Trnavy pre firmy z Trnavy, Bratislavy a okolia: odborné a úradné preklady v 25 jazykoch. Cenová ponuka do 24 hodín.">' . "
 ";
 	}
 }, 1);

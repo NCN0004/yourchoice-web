@@ -2,7 +2,7 @@
 Theme Name: Your Choice
 Description: Web Your Choice – jazykové služby pre firmy.
 Author: Claude
-Version: 1.9.3
+Version: 2.0.0
 Text Domain: yourchoice
 */
 html{scroll-behavior:smooth}
@@ -107,3 +107,9 @@ header a[href^="tel:"],header a.yc-btn{white-space:nowrap}
 @media (max-width:560px){.yc-top-claims{display:none}header>div>div>a[href^="tel:"]{display:none!important}header>div>a span{white-space:nowrap}header>div>a span span:first-child{font-size:21px!important}.yc-btn-long{display:none}header>div{flex-wrap:nowrap!important;padding:12px 16px!important}}
 .yc-mnav{display:none}
 @media (max-width:760px){.yc-mnav{display:block}.yc-mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid #ECE7DC;border-radius:12px;background:#fff}.yc-mnav summary::-webkit-details-marker{display:none}.yc-mnav-panel{position:absolute;left:0;right:0;top:100%;background:#FAF8F4;border-bottom:1px solid #ECE7DC;box-shadow:0 12px 24px rgba(20,33,61,.12);z-index:60;padding:8px 16px 16px;display:flex;flex-direction:column}.yc-mnav-panel a{padding:14px 4px;border-bottom:1px solid #ECE7DC;text-decoration:none;font-weight:600;font-size:17px;color:#14213D}.yc-mnav-panel a:last-child{border-bottom:0}}
+.yc-cities{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.yc-cities a{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid #ECE7DC;border-radius:18px;padding:18px 20px;text-decoration:none;color:#14213D;transition:border-color .15s,transform .15s}
+.yc-cities a:hover{border-color:#F59E1B;transform:translateY(-2px)}
+.yc-cities b{font-size:20px;font-family:'Bricolage Grotesque',sans-serif}.yc-cities span{font-size:14px;color:#4A5468}
+.yc-local{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.yc-local .yc-card{margin:0}
+.yc-nap{margin-top:18px;border-left:4px solid #F59E1B}

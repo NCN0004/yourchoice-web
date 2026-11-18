@@ -5,7 +5,7 @@ $A = yc_articles();
 $legal = in_array($pg, ['ochrana-osobnych-udajov', 'cookies', 'obchodne-podmienky'], true);
 /* Malý nadpis nad H1 a drobčeky podľa typu stránky. */
 if ($L) {
-	$kick = $en ? 'Translation services' : (['o' => 'Preklady podľa odvetvia', 'd' => 'Preklady podľa dokumentu', 'j' => 'Preklady podľa jazyka', 'l' => 'Prekladateľská agentúra Trnava', 'eo' => 'Translations by industry'][$L['g']] ?? 'Služby');
+	$kick = $en ? 'Translation services' : (!empty($L['kraj']) ? 'Preklady pre firmy · ' . $L['kraj'] : (['o' => 'Preklady podľa odvetvia', 'd' => 'Preklady podľa dokumentu', 'j' => 'Preklady podľa jazyka', 'l' => 'Prekladateľská agentúra Trnava', 'eo' => 'Translations by industry'][$L['g']] ?? 'Služby'));
 	$crumb = $en ? ['Translation services', home_url('/en/')] : ['Služby', home_url('/sluzby/')];
 } elseif (isset($A[$pg])) {
 	$kick = 'Odborné novinky · ' . $A[$pg]['min'] . ' min čítania'; $crumb = ['Odborné novinky', home_url('/novinky/')];

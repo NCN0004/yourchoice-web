@@ -7,7 +7,7 @@ $S = $en
 <p><span class="yc-price"><?php echo esc_html($L['price']); ?> · <?php echo $S['vat']; ?></span> <span class="yc-meta"><?php echo esc_html($S['meta']); ?></span></p>
 <?php if (empty($GLOBALS['yc_hero_lead'])): ?><p><a class="yc-btn" href="<?php echo $k; ?>"><?php echo esc_html($S['cta']); ?></a> <a href="tel:+421915343261" style="margin-left:12px;font-weight:600">+421 915 343 261</a></p><?php endif; ?>
 
-<h2><?php echo esc_html($S['h1']); ?></h2>
+<h2><?php echo esc_html($S['h1'] . (!empty($L['loc']) ? ' pre firmy ' . $L['loc'] : '')); ?></h2>
 <ul class="yc-check"><?php foreach ($L['items'] as $i) echo '<li>' . esc_html($i) . '</li>'; ?></ul>
 
 <h2><?php echo esc_html($S['h2']); ?></h2>
@@ -15,6 +15,11 @@ $S = $en
 <section class="yc-card"><h3 style="margin-top:0"><?php echo esc_html($w[0]); ?></h3><p style="margin-bottom:0"><?php echo esc_html($w[1]); ?></p></section>
 <?php endforeach; ?>
 
+<?php if (!empty($L['local'])): ?>
+<h2>Ako pomáhame firmám <?php echo esc_html($L['loc']); ?></h2>
+<div class="yc-local"><?php foreach ($L['local'] as $w): ?><section class="yc-card"><h3 style="margin-top:0"><?php echo esc_html($w[0]); ?></h3><p style="margin-bottom:0"><?php echo esc_html($w[1]); ?></p></section><?php endforeach; ?></div>
+<section class="yc-card yc-nap"><h3 style="margin-top:0">Kde nás nájdete</h3><p style="margin-bottom:0"><b>Your Choice – jazykové služby, s.r.o.</b><br>Jazdecká 8686/65, 917 08 Trnava<br>Telefón <a href="tel:+421915343261">+421 915 343 261</a> · <a href="mailto:hello@yourchoice.sk">hello@yourchoice.sk</a><br>Pondelok – piatok 8:00 – 18:00 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Your+Choice+jazykov%C3%A9+slu%C5%BEby+Jazdeck%C3%A1+8686%2F65+Trnava" target="_blank" rel="noopener">Ukázať na mape</a></p></section>
+<?php endif; ?>
 <?php if (!$en): $refs = yc_references(); $rm = ['pravne-preklady' => 1, 'preklad-zmluvy' => 1, 'preklad-vyrocnej-spravy' => 1, 'preklad-vypisu-z-obchodneho-registra' => 1, 'preklad-do-anglictiny' => 1]; $r = $refs[$L['ref'] ?? ($rm[$pg] ?? 2)]; ?>
 <h2>Ako to prebieha</h2>
 <ol class="yc-steps">

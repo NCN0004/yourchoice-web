@@ -22,7 +22,7 @@ add_action('wp_head', function () {
 	if (is_404() || is_search()) return;
 	$pages = yc_pages(); $pg = get_query_var('yc_page');
 	$title = wp_get_document_title();
-	$desc = ($pg && isset($pages[$pg])) ? $pages[$pg][1] : 'Odborné a úradné preklady pre firmy v 25 jazykoch. Zmluvy, technická dokumentácia, weby a dokumenty pre zamestnancov. Cenová ponuka do 24 hodín.';
+	$desc = ($pg && isset($pages[$pg])) ? $pages[$pg][1] : 'Prekladateľská agentúra z Trnavy pre firmy z Trnavy, Bratislavy a okolia: odborné a úradné preklady v 25 jazykoch. Cenová ponuka do 24 hodín.';
 	$url = yc_current_url();
 	$img = get_template_directory_uri() . '/og.jpg';
 	echo '<link rel="canonical" href="' . esc_url($url) . '">' . "\n";

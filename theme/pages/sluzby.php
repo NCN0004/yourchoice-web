@@ -84,7 +84,7 @@
 
 <h2>Preklady podľa jazyka</h2>
 <div class="yc-links"><?php foreach (yc_landing() as $s => $x) if ($x['g'] === 'j') echo '<a href="' . esc_url(home_url('/' . $s . '/')) . '">' . esc_html($x['n']) . '</a>'; ?></div>
-<p>Podrobné ceny a príklady výpočtu nájdete v <a href="<?php echo esc_url(home_url('/cennik/')); ?>">cenníku prekladov</a>. Sme z Trnavy – <a href="<?php echo esc_url(home_url('/preklady-trnava/')); ?>">prekladateľská agentúra Trnava</a>.</p>
+<p>Podrobné ceny a príklady výpočtu nájdete v <a href="<?php echo esc_url(home_url('/cennik/')); ?>">cenníku prekladov</a>. Sme z Trnavy a prekladáme pre firmy z celého regiónu: <?php echo implode(' · ', array_map(function ($cs, $cx) { return '<a href="' . esc_url(home_url('/' . $cs . '/')) . '">' . esc_html($cx['city']) . '</a>'; }, array_keys(yc_cities()), yc_cities())); ?>.</p>
 
 <p class="yc-meta">Tlmočenie angličtiny poskytujeme na vyžiadanie pri rokovaniach a auditoch.</p>
 

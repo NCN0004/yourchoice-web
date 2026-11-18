@@ -213,6 +213,14 @@
 </div>
 </section>
 
+<!-- REGION -->
+<section id="kde-posobime" style="max-width: 1200px; margin: 0 auto; padding: 8px 24px 72px; display: flex; flex-direction: column; gap: 20px">
+<span style="font-weight: 700; color: #D9840F; font-size: 14px; letter-spacing: 0.08em">KDE PÔSOBÍME</span>
+<h2 style="margin: 0; font-size: 40px; font-weight: 800">Preklady pre firmy z Trnavy, Bratislavy a okolia</h2>
+<p style="margin: 0; font-size: 18px; color: #4A5468; max-width: 760px; line-height: 1.6">Kanceláriu máme na Jazdeckej ulici v Trnave. Najčastejšie prekladáme pre firmy z Trnavského a Bratislavského kraja, odborné preklady však vybavíme elektronicky pre celé Slovensko.</p>
+<div class="yc-cities"><?php foreach (yc_cities() as $cs => $cx): ?><a href="<?php echo esc_url(home_url('/' . $cs . '/')); ?>"><b><?php echo esc_html($cx['city']); ?></b><span><?php echo esc_html($cx['kraj']); ?></span></a><?php endforeach; ?></div>
+</section>
+
 <!-- FAQ -->
 <section style="max-width: 900px; margin: 0 auto; padding: 24px 24px 80px; display: flex; flex-direction: column; gap: 14px">
 <h2 style="margin: 0 0 10px; font-size: 40px; font-weight: 800; text-align: center">Časté otázky firiem</h2>
