@@ -33,8 +33,7 @@ function yc_mail_rows($rows) {
 
 /* Potvrdenie zákazníkovi. */
 function yc_mail_customer($kind, $f, $nr, $nfiles) {
-	$name = trim((string) ($f['meno'] ?? ''));
-	$hi = 'Dobrý deň' . ($name !== '' ? ', ' . esc_html($name) : '') . ',';
+	$hi = 'Dobrý deň,';
 	if ($kind === 'cennik') {
 		$title = 'Ďakujeme za záujem o náš cenník';
 		$lead = 'Cenník prekladov pre firmy vám pošleme e-mailom do 24 hodín v pracovné dni. Nájdete v ňom ceny podľa jazykov a odborov, zľavy pri väčšom objeme a vzor rámcovej zmluvy.';
