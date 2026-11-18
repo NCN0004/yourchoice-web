@@ -75,7 +75,7 @@ add_action('wp_head', function () {
 /* Title for the homepage */
 add_filter('pre_get_document_title', function ($t) {
 	$pg = get_query_var('yc_page'); $pages = yc_pages();
-	if ($pg && isset($pages[$pg])) return $pages[$pg][0] . ' | Your Choice';
+	if ($pg && isset($pages[$pg])) { $t = $pages[$pg][0]; return mb_strlen($t) > 50 ? $t : $t . ' | Your Choice'; }
 	if (get_query_var('yc_thanks')) return 'Ďakujeme | Your Choice';
 	if (is_front_page()) return 'Preklady pre firmy – odborné a úradné | Your Choice';
 	return $t;

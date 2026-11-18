@@ -15,12 +15,12 @@ $S = $en
 <section class="yc-card"><h3 style="margin-top:0"><?php echo esc_html($w[0]); ?></h3><p style="margin-bottom:0"><?php echo esc_html($w[1]); ?></p></section>
 <?php endforeach; ?>
 
-<?php if (!$en): $refs = yc_references(); $r = $refs[$L['ref'] ?? 1]; ?>
+<?php if (!$en): $refs = yc_references(); $rm = ['pravne-preklady' => 1, 'preklad-zmluvy' => 1, 'preklad-vyrocnej-spravy' => 1, 'preklad-vypisu-z-obchodneho-registra' => 1, 'preklad-do-anglictiny' => 1]; $r = $refs[$L['ref'] ?? ($rm[$pg] ?? 2)]; ?>
 <h2>Ako to prebieha</h2>
 <ol class="yc-steps">
 <li><b>Pošlete nám dokument</b> cez formulár alebo e-mailom, v ľubovoľnom bežnom formáte.</li>
 <li><b>Do 24 hodín máte cenu a termín.</b> Nezáväzne, v pracovné dni.</li>
-<li><b>Prekladá odborník z vášho odboru.</b> Pri angličtine preklad navyše skontroluje druhý lingvista. Preklad dostanete vo formáte, v akom ste ho poslali.</li>
+<li><b>Prekladá odborník z vášho odboru.</b> Ak v origináli nájdeme nejasnosť alebo preklep, upozorníme vás ešte pred odovzdaním. Preklad dostanete vo formáte, v akom ste ho poslali.</li>
 </ol>
 <h2>Koľko to bude stáť</h2>
 <p>Cena = počet normostrán × sadzba. Normostrana má 1 800 znakov vrátane medzier, čo je zhruba dve tretiny strany A4.</p>
