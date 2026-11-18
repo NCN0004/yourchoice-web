@@ -55,4 +55,3 @@ $map = 'https://www.google.com/maps/search/?api=1&query=Your+Choice+jazykov%C3%A
  </dl>
 </section>
 
-<p class="yc-meta">Ste súkromná osoba a potrebujete úradný preklad dokladov? Navštívte <a href="https://uradnaprekladatelka.sk">uradnaprekladatelka.sk</a>.</p>
