@@ -118,9 +118,18 @@ define('YC_CANONICAL_HOST', 'www.yourchoice.sk');
 add_action('init', function () {
 	$h = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
 	if ($h === '' || $h === YC_CANONICAL_HOST || substr($h, -13) !== 'yourchoice.sk') return;
-	if (isset($_GET['yc_deploy']) || wp_doing_cron() || is_admin() || (defined('WP_CLI') && WP_CLI)) return;
-	if (strpos((string) ($_SERVER['REQUEST_URI'] ?? ''), 'wp-login.php') !== false) return;
+	if (isset($_GET['yc_deploy']) || wp_doing_cron() || wp_doing_ajax() || (defined('WP_CLI') && WP_CLI)) return;
+	if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') return;
 	wp_redirect('https://' . YC_CANONICAL_HOST . ($_SERVER['REQUEST_URI'] ?? '/'), 301, 'Your Choice');
+	exit;
+}, 0);
+/* Prihlasovacia stránka sa načítava ešte pred 'init' témy – presmerujeme ju zvlášť. */
+add_action('login_init', function () {
+	$h = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+	if ($h === '' || $h === YC_CANONICAL_HOST || substr($h, -13) !== 'yourchoice.sk') return;
+	if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') return;
+	$uri = str_replace(rawurlencode('https://' . $h), rawurlencode('https://' . YC_CANONICAL_HOST), (string) ($_SERVER['REQUEST_URI'] ?? '/wp-login.php'));
+	wp_redirect('https://' . YC_CANONICAL_HOST . $uri, 301, 'Your Choice');
 	exit;
 }, 0);
 foreach (['option_home', 'option_siteurl'] as $yc_opt) add_filter($yc_opt, function ($v) {
