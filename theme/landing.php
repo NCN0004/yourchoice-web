@@ -36,9 +36,9 @@ $S = $en
 <?php endforeach; ?>
 <script type="application/ld+json"><?php echo wp_json_encode(['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => array_map(function ($f) { return ['@type' => 'Question', 'name' => $f[0], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f[1]]]; }, $L['faq'])]); ?></script>
 
-<section class="yc-card" style="background:#14213D;color:#fff;border:0">
+<?php if ($en): ?><section class="yc-card" style="background:#14213D;color:#fff;border:0">
 <h2 style="color:#fff"><?php echo esc_html($S['b1']); ?></h2>
 <p><?php echo esc_html($S['b2']); ?></p>
 <a class="yc-btn" href="<?php echo $k; ?>"><?php echo esc_html($S['b3']); ?></a>
-</section>
+</section><?php endif; ?>
 <p class="yc-meta"><?php echo esc_html($S['also']); ?>: <?php $o = []; foreach (yc_landing() as $s => $x) if ($s !== $pg && $x['g'] === $L['g']) $o[] = '<a href="' . esc_url(home_url('/' . $s . '/')) . '">' . esc_html($x['n']) . '</a>'; echo implode(' · ', $o); ?> · <a href="<?php echo esc_url($S['allurl']); ?>"><?php echo esc_html($S['all']); ?></a><?php if ($en && !empty($L['sk'])) echo ' · <a lang="sk" href="' . esc_url(home_url('/' . $L['sk'] . '/')) . '">Slovenská verzia</a>'; ?></p>
