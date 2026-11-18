@@ -113,19 +113,66 @@ add_filter('wp_mail_from_name', function () { return 'Your Choice – web'; });
 /* Anglické stránky: jazyk dokumentu. */
 add_filter('language_attributes', function ($o) { return yc_is_en() ? 'lang="en-GB"' : $o; });
 
-/* Odosielanie e-mailov cez SMTP schránku na yourchoice.sk (M7/Platon).
-   Zapne sa až vtedy, keď sú v súbore wp-config.php na serveri nastavené konštanty
-   YC_SMTP_HOST, YC_SMTP_USER, YC_SMTP_PASS (a voliteľne YC_SMTP_PORT, YC_SMTP_SECURE).
-   Heslo sa nikdy neukladá do tohto repozitára. */
+/* Jedna oficiálna adresa webu: https://www.yourchoice.sk (presmeruje yourchoice.sk aj novy.yourchoice.sk). */
+define('YC_CANONICAL_HOST', 'www.yourchoice.sk');
+add_action('init', function () {
+	$h = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+	if ($h === '' || $h === YC_CANONICAL_HOST || substr($h, -13) !== 'yourchoice.sk') return;
+	if (isset($_GET['yc_deploy']) || wp_doing_cron() || is_admin() || (defined('WP_CLI') && WP_CLI)) return;
+	if (strpos((string) ($_SERVER['REQUEST_URI'] ?? ''), 'wp-login.php') !== false) return;
+	wp_redirect('https://' . YC_CANONICAL_HOST . ($_SERVER['REQUEST_URI'] ?? '/'), 301, 'Your Choice');
+	exit;
+}, 0);
+foreach (['option_home', 'option_siteurl'] as $yc_opt) add_filter($yc_opt, function ($v) {
+	$h = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+	return ($h === YC_CANONICAL_HOST) ? 'https://' . YC_CANONICAL_HOST : $v;
+}, 99);
+
+/* Odosielanie e-mailov z webu cez schránku web@yourchoice.sk u M7 (Platon).
+   Heslo zadá správca v administrácii: Nastavenia → E-mail webu. Do kódu sa heslo nikdy neukladá. */
+function yc_smtp_conf() {
+	return [
+		'host' => defined('YC_SMTP_HOST') ? YC_SMTP_HOST : 'smtps.platon.sk',
+		'port' => defined('YC_SMTP_PORT') ? (int) YC_SMTP_PORT : 465,
+		'secure' => defined('YC_SMTP_SECURE') ? YC_SMTP_SECURE : 'ssl',
+		'user' => defined('YC_SMTP_USER') ? YC_SMTP_USER : 'web@yourchoice.sk',
+		'pass' => defined('YC_SMTP_PASS') ? YC_SMTP_PASS : (string) get_option('yc_smtp_pass', ''),
+	];
+}
 add_action('phpmailer_init', function ($m) {
-	if (!defined('YC_SMTP_HOST') || !defined('YC_SMTP_USER') || !defined('YC_SMTP_PASS')) return;
+	$c = yc_smtp_conf();
+	if ($c['pass'] === '') return;
 	$m->isSMTP();
-	$m->Host = YC_SMTP_HOST;
+	$m->Host = $c['host'];
 	$m->SMTPAuth = true;
-	$m->Username = YC_SMTP_USER;
-	$m->Password = YC_SMTP_PASS;
-	$m->Port = defined('YC_SMTP_PORT') ? (int) YC_SMTP_PORT : 587;
-	$m->SMTPSecure = defined('YC_SMTP_SECURE') ? YC_SMTP_SECURE : 'tls';
-	$m->setFrom(YC_SMTP_USER, 'Your Choice – web', false);
-	$m->Sender = YC_SMTP_USER;
+	$m->Username = $c['user'];
+	$m->Password = $c['pass'];
+	$m->Port = $c['port'];
+	$m->SMTPSecure = $c['secure'];
+	$m->setFrom($c['user'], 'Your Choice – web', false);
+	$m->Sender = $c['user'];
+});
+add_action('wp_mail_failed', function ($e) { update_option('yc_smtp_last_error', current_time('mysql') . ' – ' . $e->get_error_message(), false); });
+add_action('admin_menu', function () {
+	add_options_page('E-mail webu', 'E-mail webu', 'manage_options', 'yc-email', function () {
+		$c = yc_smtp_conf();
+		$msg = '';
+		if (isset($_POST['yc_smtp_nonce']) && wp_verify_nonce($_POST['yc_smtp_nonce'], 'yc_smtp')) {
+			if (!empty($_POST['yc_smtp_pass'])) { update_option('yc_smtp_pass', wp_unslash($_POST['yc_smtp_pass']), false); $msg = 'Heslo je uložené.'; }
+			if (!empty($_POST['yc_smtp_test'])) {
+				delete_option('yc_smtp_last_error');
+				$ok = wp_mail(yc_notify_email(), '[yourchoice.sk] Test odosielania z webu', "Toto je testovací e-mail z webu www.yourchoice.sk.\nAk ho čítate, odosielanie cez schránku web@yourchoice.sk funguje.\n\nOdoslané: " . current_time('d. m. Y H:i'));
+				$msg = $ok ? 'Testovací e-mail bol odoslaný na ' . esc_html(yc_notify_email()) . '. Skontrolujte schránku (aj spam).' : 'Odoslanie zlyhalo: ' . esc_html((string) get_option('yc_smtp_last_error'));
+			}
+			$c = yc_smtp_conf();
+		}
+		echo '<div class="wrap"><h1>E-mail webu</h1>';
+		if ($msg) echo '<div class="notice notice-info"><p>' . $msg . '</p></div>';
+		echo '<p>Web posiela dopyty a potvrdenia cez schránku <b>' . esc_html($c['user']) . '</b> na serveri ' . esc_html($c['host']) . ' (port ' . (int) $c['port'] . ', ' . esc_html(strtoupper($c['secure'])) . ').</p>';
+		echo '<p>Stav: ' . ($c['pass'] !== '' ? '<b style="color:#2E9E6A">heslo je nastavené</b>' : '<b style="color:#B45309">heslo zatiaľ chýba – web posiela náhradným spôsobom</b>') . '</p>';
+		$err = get_option('yc_smtp_last_error'); if ($err) echo '<p>Posledná chyba: ' . esc_html($err) . '</p>';
+		echo '<form method="post">'; wp_nonce_field('yc_smtp', 'yc_smtp_nonce');
+		echo '<p><label>Heslo k schránke ' . esc_html($c['user']) . '<br><input type="password" name="yc_smtp_pass" autocomplete="new-password" style="width:320px"></label></p>';
+		echo '<p><button class="button button-primary" name="yc_smtp_save" value="1">Uložiť heslo</button> <button class="button" name="yc_smtp_test" value="1">Poslať testovací e-mail</button></p></form></div>';
+	});
 });
