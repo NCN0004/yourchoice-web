@@ -39,8 +39,8 @@
 </section>
 
 <!-- NUMBERS -->
-<section aria-label="Čísla" style="background: #14213D; color: #FFFFFF">
-<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px">
+<section aria-label="Čísla" style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+<div style="background: #14213D; color: #FFFFFF; border-radius: 24px; padding: 36px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px">
 <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 44px; font-weight: 800; color: #F59E1B">32 000</span><span style="color: #C9D1E3">preložených strán</span></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 44px; font-weight: 800; color: #F59E1B">25</span><span style="color: #C9D1E3">jazykov</span></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 44px; font-weight: 800; color: #F59E1B">50+</span><span style="color: #C9D1E3">prekladateľov z odborov</span></div>
