@@ -58,9 +58,9 @@ add_action('wp_enqueue_scripts', function () {
 
 add_action('wp_head', function () {
 	$u = get_template_directory_uri();
-	echo '<link rel="icon" href="' . esc_url($u . '/favicon.ico?v=3') . '" sizes="48x48">' . "\n";
-	echo '<link rel="icon" href="' . esc_url($u . '/favicon.svg?v=3') . '" type="image/svg+xml">' . "\n";
-	echo '<link rel="apple-touch-icon" href="' . esc_url($u . '/apple-touch-icon.png?v=3') . '">' . "\n";
+	echo '<link rel="icon" href="' . esc_url($u . '/favicon.ico?v=4') . '" sizes="48x48">' . "\n";
+	echo '<link rel="icon" href="' . esc_url($u . '/favicon.svg?v=4') . '" type="image/svg+xml">' . "\n";
+	echo '<link rel="apple-touch-icon" href="' . esc_url($u . '/apple-touch-icon.png?v=4') . '">' . "\n";
 
 	echo '<meta name="theme-color" content="#14213D">' . "\n";
 	$pg = get_query_var('yc_page'); $pages = yc_pages();
