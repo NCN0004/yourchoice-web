@@ -14,7 +14,7 @@ function yc_mail_wrap($preheader, $inner, $sign = true) {
 	. $inner
 	. (!$sign ? '<tr><td style="height:12px;"></td></tr>' : '<tr><td style="padding:8px 32px 28px;font-size:15px;line-height:1.6;">'
 	. '<p style="margin:0 0 6px;">S pozdravom</p>'
-	. '<p style="margin:0;"><strong>Janka Kubičková</strong><br>projektová manažérka, Your Choice<br>'
+	. '<p style="margin:0;"><strong>Janka</strong><br>projektová manažérka, Your Choice<br>'
 	. 'tel. <a href="tel:+421915343261" style="color:#14213D;">+421 915 343 261</a> · <a href="mailto:hello@yourchoice.sk" style="color:#14213D;">hello@yourchoice.sk</a></p></td></tr>')
 	. '<tr><td style="background:#14213D;border-radius:0 0 12px 12px;padding:16px 32px;font-size:12px;line-height:1.6;color:#D9D3C5;">'
 	. 'Your Choice – jazykové služby, s.r.o. · Jazdecká 8686/65, 917 08 Trnava · IČO 50208055 · IČ DPH SK2120212391<br>'

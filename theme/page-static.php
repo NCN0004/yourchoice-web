@@ -42,7 +42,7 @@ get_header(); ?>
 <?php if (!$legal && !$en && $pg !== 'kontakt'): ?>
 <section class="yc-endcta">
  <div class="yc-endcta-in">
-  <div class="yc-endcta-person"><span class="yc-avatar">JK</span><div><b>Janka Kubičková</b><br><span>projektová manažérka</span></div></div>
+  <div class="yc-endcta-person"><span class="yc-avatar">J</span><div><b>Janka</b><br><span>projektová manažérka</span></div></div>
   <div class="yc-endcta-txt"><h2>Pošlite dokument, cenu máte do 24 hodín</h2><p>Nezáväzne, v pracovné dni. Na dopyt odpovedá vždy ten istý človek.</p></div>
   <div class="yc-endcta-act"><a class="yc-btn" href="<?php echo yc_anchor('kontakt'); ?>">Poslať dopyt</a><a class="yc-endcta-tel" href="tel:+421915343261">+421 915 343 261</a></div>
  </div>

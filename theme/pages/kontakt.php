@@ -17,7 +17,7 @@ $map = 'https://www.google.com/maps/search/?api=1&query=Your+Choice+jazykov%C3%A
 <div class="yc-k2">
  <section class="yc-kc">
   <p class="yc-kc-label">Váš kontakt</p>
-  <div class="yc-kperson"><span class="yc-avatar">JK</span><div><b>Janka Kubičková</b><span>projektová manažérka</span></div></div>
+  <div class="yc-kperson"><span class="yc-avatar">J</span><div><b>Janka</b><span>projektová manažérka</span></div></div>
   <p>Odpovedá na všetky dopyty a postará sa o celú zákazku od ponuky po odovzdanie prekladu. Netreba nič vysvetľovať dvakrát.</p>
   <p class="yc-kc-fast">Cenu a termín máte <b>do 24 hodín</b> v pracovné dni</p>
   <a class="yc-btn" href="<?php echo yc_anchor('kontakt'); ?>">Poslať dopyt cez formulár</a>
