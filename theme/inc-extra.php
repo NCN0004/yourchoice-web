@@ -30,6 +30,8 @@ add_action('wp_head', function () {
 		echo '<meta property="' . esc_attr($k) . '" content="' . esc_attr($v) . '">' . "\n";
 	}
 	$LL = yc_landing();
+	$hs = home_url('/'); $he = home_url('/en/');
+	if ($url === $hs || $url === $he) { echo '<link rel="alternate" hreflang="sk" href="' . esc_url($hs) . '">' . "\n" . '<link rel="alternate" hreflang="en" href="' . esc_url($he) . '">' . "\n" . '<link rel="alternate" hreflang="x-default" href="' . esc_url($hs) . '">' . "\n"; }
 	if ($pg && isset($LL[$pg]['sk'])) { echo '<link rel="alternate" hreflang="en" href="' . esc_url($url) . '">' . "\n" . '<link rel="alternate" hreflang="sk" href="' . esc_url(home_url('/' . $LL[$pg]['sk'] . '/')) . '">' . "\n"; }
 	foreach ($LL as $es => $ex) if (isset($ex['sk']) && $ex['sk'] === $pg) { echo '<link rel="alternate" hreflang="sk" href="' . esc_url($url) . '">' . "\n" . '<link rel="alternate" hreflang="en" href="' . esc_url(home_url('/' . $es . '/')) . '">' . "\n"; }
 	echo '<meta name="twitter:card" content="summary_large_image">' . "\n";

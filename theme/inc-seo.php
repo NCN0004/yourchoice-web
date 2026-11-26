@@ -106,15 +106,16 @@ add_action('template_redirect', function () {
 		$L = yc_landing();
 		$pairs = [];
 		foreach ($L as $s => $x) if (!empty($x['sk'])) { $pairs[$s] = $x['sk']; $pairs[$x['sk']] = $s; }
+		$pairs[''] = 'en'; $pairs['en'] = '';
 		echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 		echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' . "\n";
 		foreach (yc_public_pages() as $s => $pr) {
 			$loc = home_url($s === '' ? '/' : '/' . $s . '/');
 			echo "<url><loc>" . esc_url($loc) . "</loc><lastmod>$mod</lastmod><priority>" . number_format($pr, 1) . "</priority>";
 			if (isset($pairs[$s])) {
-				$en = strpos($s, 'en/') === 0;
+				$en = strpos($s, 'en/') === 0 || $s === 'en';
 				echo '<xhtml:link rel="alternate" hreflang="' . ($en ? 'en' : 'sk') . '" href="' . esc_url($loc) . '"/>';
-				echo '<xhtml:link rel="alternate" hreflang="' . ($en ? 'sk' : 'en') . '" href="' . esc_url(home_url('/' . $pairs[$s] . '/')) . '"/>';
+				echo '<xhtml:link rel="alternate" hreflang="' . ($en ? 'sk' : 'en') . '" href="' . esc_url(home_url($pairs[$s] === '' ? '/' : '/' . $pairs[$s] . '/')) . '"/>';
 			}
 			echo "</url>\n";
 		}
